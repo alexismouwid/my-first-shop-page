@@ -1,8 +1,60 @@
+
+html, body, #root, .App {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 #root {
-  max-width: 1280px;
+  max-width: none;
+  width: 100%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0rem;
   text-align: center;
+}
+html{
+  scroll-snap-type:  y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 
+.App{ width: 100%;
+  height: 100vh;
+  padding: 0rem;
+  text-align: center;
+}
+  .content-1{
+    
+    background-image: url("/vegetales.png");
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .titulo{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 100px;
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    border: none;
+  }
+  .titulo:hover{
+    color: green;
+    font-size: 101px;
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+  }

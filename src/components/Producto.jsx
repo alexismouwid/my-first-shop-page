@@ -2,11 +2,12 @@ import { Component } from "react";
 import Button from "./Button";
 const styles = {
   producto: {
-    border: "solid 5px #blue",
-    boxShadow: "0 5px 5px rgb(0,0,0,0.1)",
-    width: "30%",
-    padding: "10px 5px",
+    backgroundColor: "#fff",
+    padding: "10px",
+    margin: "10px",
     borderRadius: "5px",
+    boxShadow: "0px 0px 5px 0px rgba(0,0,0,0.75)",
+    width: "300px",
   },
   img: {
     width: "100%",

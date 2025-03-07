@@ -1,16 +1,34 @@
-import { Component } from "react";
+import { Component, createRef } from "react";
 import Productos from "./components/Productos";
 import Layout from "./components/Layout";
 import Title from "./components/Title";
 import Navbar from "./components/Navbar";
+import VerProductos from "./components/VerProductos";
+import Footer from "./components/Footer";
+import "./App.css";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.productosRef = createRef(); // 🔹 Creamos una referencia a la sección de productos
+  }
+
   state = {
     productos: [
-      { name: "Tomate", price: 1500, img: "/productos/tomate.jpg" },
-      { name: "Arbejas", price: 1500, img: "/productos/arbejas.jpg" },
-      { name: "Lechuga", price: 1500, img: "/productos/lechuga.jpg" },
+      { name: "Tomate", price: 900.5, img: "/productos/tomate.jpg" },
+      { name: "Arbejas", price: 800.3, img: "/productos/arbejas.jpg" },
+      { name: "Lechuga", price: 1000.9, img: "/productos/lechuga.jpg" },
+      { name: "Zanahoria", price: 1500.2, img: "/productos/zanahoria.png" },
+      { name: "Cebolla", price: 2100.4, img: "/productos/cebolla.png" },
+      { name: "Brócoli", price: 1350.6, img: "/productos/brocoli.png" },
+      { name: "Espinaca", price: 1700.8, img: "/productos/espinaca.png" },
+      { name: "Pepino", price: 1900.7, img: "/productos/pepino.png" },
+      { name: "Calabacín", price: 2250.5, img: "/productos/calabacin.png" },
+      { name: "Ajo", price: 2500.9, img: "/productos/ajo.png" },
+      { name: "Pimiento", price: 1600.5, img: "/productos/pimiento.png" },
+      { name: "Repollo", price: 1750.3, img: "/productos/repollo.png" },
     ],
+
     carro: [],
     esCarroVisible: false,
   };
@@ -19,7 +37,13 @@ class App extends Component {
     const { carro } = this.state;
     if (carro.find((x) => x.name === producto.name)) {
       const newCarro = carro.map((x) =>
-        x.name === producto.name ? { ...x, cantidad: x.cantidad + 1 } : x,
+        x.name === producto.name
+          ? {
+              ...x,
+              cantidad: x.cantidad + 1,
+              price: (x.cantidad + 1) * x.price,
+            }
+          : x,
       );
       return this.setState({ carro: newCarro });
     }
@@ -31,25 +55,42 @@ class App extends Component {
   mostrarCarro = () => {
     this.setState({ esCarroVisible: !this.state.esCarroVisible });
   };
+
+  // 🔹 Función para hacer scroll a la sección de productos
+  scrollToProductos = () => {
+    if (this.productosRef.current) {
+      this.productosRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   render() {
     const { esCarroVisible } = this.state;
     return (
-      <div>
-        <Navbar
-          carro={this.state.carro}
-          esCarroVisible={esCarroVisible}
-          mostrarCarro={this.mostrarCarro}
-        />
-        <Layout>
-          <Title />
-          <Productos
-            agregarAlCarro={this.agregarAlCarro}
-            productos={this.state.productos}
+      <div className="App">
+        <div className="content-1">
+          <Navbar
+            carro={this.state.carro}
+            esCarroVisible={esCarroVisible}
+            mostrarCarro={this.mostrarCarro}
           />
-          <h1>Shop</h1>
-        </Layout>
+          <h1 className="titulo">Productos del campo</h1>
+          <VerProductos scrollToProductos={this.scrollToProductos} />
+        </div>
+
+        {/* 🔹 Referencia a la sección de productos */}
+        <div ref={this.productosRef}>
+          <Layout>
+            <Title />
+            <Productos
+              agregarAlCarro={this.agregarAlCarro}
+              productos={this.state.productos}
+            />
+          </Layout>
+        </div>
+        <Footer />
       </div>
     );
   }
 }
+
 export default App;

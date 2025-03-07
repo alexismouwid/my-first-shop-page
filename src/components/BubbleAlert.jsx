@@ -4,9 +4,9 @@ const styles = {
     backgroundColor: "#e9725a",
     borderRadius: "15px",
     color: "#fff",
-    padding: "10px 15px",
-    fontSize: "1.2rem",
-    width: "30px",
+    padding: "10px 12px",
+    fontSize: "0.7rem",
+    width: "5px",
   },
 };
 class BubbleAlert extends Component {

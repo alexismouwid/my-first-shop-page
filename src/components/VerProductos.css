@@ -1,0 +1,21 @@
+.btn-productos{
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+  position: relative;
+  top: 300px;
+  transition: 0.3s ease-in-out;
+  border-radius: 5px;
+}
+
+.btn-productos:hover{
+  background-color: #fff;
+  color: #000000;
+}

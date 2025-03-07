@@ -2,11 +2,12 @@ import { Component } from "react";
 const styles = {
   title: {
     marginBottom: "30px",
+    textAlign: "center",
   },
 };
 class Title extends Component {
   render() {
-    return <h1>Tienda</h1>;
+    return <h1>Productos</h1>;
   }
 }
 

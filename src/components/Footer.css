@@ -1,0 +1,27 @@
+.footer {
+  background: url("/vegetales2.png")center/cover;
+  color: black;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.footer-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.icons {
+  margin: 10px 0;
+}
+
+.icon {
+  font-size: 30px;
+  margin: 0 10px;
+  color: white;
+  transition: transform 0.3s ease-in-out;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}
+

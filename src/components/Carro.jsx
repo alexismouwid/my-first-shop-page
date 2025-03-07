@@ -3,17 +3,21 @@ import BubbleAlert from "./BubbleAlert";
 import DetallesCarro from "./DetallesCarro";
 const styles = {
   carro: {
-    backgroundColor: "#9b9b9b",
-    color: "#fff",
-    border: "none",
-    padding: "15px",
-    borderRadius: "15px",
+    backgroundColor: "rgba(0, 0, 0, 0.1)",
+    padding: "8px 30px",
+    borderRadius: "5px",
     cursor: "pointer",
   },
   bubble: {
     position: "relative",
-    left: 12,
-    top: 20,
+    left: 40,
+    top: 1,
+    bottom: 20,
+    color: "#fff",
+    border: "none",
+    padding: "5px 10px",
+    borderRadius: "0px",
+    cursor: "pointer",
   },
 };
 class Carro extends Component {
@@ -27,7 +31,7 @@ class Carro extends Component {
           {cantidad !== 0 ? <BubbleAlert value={cantidad} /> : null}
         </span>
         <button onClick={mostrarCarro} style={styles.carro}>
-          <img src="/carro.png" alt="carro" width="40px" />
+          <img src="/carro.png" alt="carro" width="50px" />
         </button>
         {esCarroVisible ? <DetallesCarro carro={carro} /> : null}
       </div>

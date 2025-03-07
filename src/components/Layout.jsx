@@ -2,7 +2,8 @@ import { Component } from "react";
 
 const styles = {
   layout: {
-    backgroundColor: "#fff",
+    backgroundColor: "#f0f0f0",
+    padding: "20px",
     alignItems: "center",
     display: "flex",
     color: "#OA283E",

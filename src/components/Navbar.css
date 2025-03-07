@@ -1,0 +1,52 @@
+@keyframes slideDown {
+  from {
+    transform: translateY(-100px); /* 🔹 Empieza fuera de la pantalla */
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0); /* 🔹 Llega a su posición normal */
+    opacity: 1;
+  }
+}
+
+
+
+.navbar {
+  animation: slideDown 1s ease-in-out; /* 🔥 Aplica la animación */
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.1); /* 🔹 Fondo semitransparente */
+  padding: 0 30px;
+  margin: 5px;
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(3px); /* 🔹 Efecto desenfoque */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar.hidden {
+  transform: translateY(-100%);
+}
+
+/* 🔹 Cambiar navbar en la segunda sección */
+.navbar.scrolled {
+  display: flex;
+  background-color: #000 !important; /* 🔥 Fondo sólido */
+  backdrop-filter: none !important; /* 🔥 Quitar desenfoque */
+  border: none !important; /* 🔥 Quitar borde */
+}
+
+h1{
+  padding: 21px 30px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
