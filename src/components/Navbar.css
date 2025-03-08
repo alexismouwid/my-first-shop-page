@@ -31,8 +31,9 @@
   transition: all 0.3s ease-in-out;
 }
 
+/* 🔹 Ocultar navbar en el primer scroll */
 .navbar.hidden {
-  transform: translateY(-100%);
+  display: none;
 }
 
 /* 🔹 Cambiar navbar en la segunda sección */
@@ -43,10 +44,15 @@
   border: none !important; /* 🔥 Quitar borde */
 }
 
-h1{
-  padding: 21px 30px;
-  border-radius: 5px;
-  color: #fff;
-  cursor: pointer;
+
+nav h1: {
+  transition: 0.5s ease-in-out;
 }
+nav h1:hover {
+
+  color: green;
+
+}
+
+
 

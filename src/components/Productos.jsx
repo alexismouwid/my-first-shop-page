@@ -1,23 +1,15 @@
 import { Component, createRef } from "react";
 import Producto from "./Producto.jsx";
 import ScrollReveal from "scrollreveal";
+import "./Productos.css";
 
-const styles = {
-  productos: {
-    display: "grid",
-    gridTemplateColumns: "repeat(3, 1fr)",
-    gap: "30px",
-    marginTop: "30px",
-    marginBottom: "30px",
-    width: "100%",
-  },
-};
+const styles = {};
 
 class Productos extends Component {
   render() {
     const { productos, agregarAlCarro } = this.props;
     return (
-      <div ref={this.productosRef} style={styles.productos}>
+      <div ref={this.productosRef} className="productos">
         {productos.map((producto) => (
           <Producto
             agregarAlCarro={agregarAlCarro}
