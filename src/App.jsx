@@ -31,7 +31,11 @@ class App extends Component {
 
     carro: [],
     esCarroVisible: false,
+    usuario: JSON.parse(localStorage.getItem("usuario")) || null,
+    usuarioAutenticado: !!localStorage.getItem("token"),
   };
+
+
 
   agregarAlCarro = (producto) => {
     const { carro } = this.state;
@@ -63,8 +67,30 @@ class App extends Component {
     }
   };
 
+  cerrarSesion = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("usuario");
+    this.setState({ usuarioAutenticado: false, usuario: null }, () => {
+this.verificarSesion();      
+    });
+  };
+
+ verificarSesion = () => {
+    const token = localStorage.getItem("token");
+   console.log("Token en localStorage:", token);
+    this.setState({ usuarioAutenticado: !!token });
+  };
+  componentDidMount() {
+    this.verificarSesion();
+  }
+
   render() {
-    const { esCarroVisible } = this.state;
+    const { carro, esCarroVisible, usuario , usuarioAutenticado} = this.state;
+    const nombre = JSON.parse(localStorage.getItem("usuario")) || {
+      nombre: "Invitado",
+    };
+    console.log("Usuario en localStorage:", nombre);
+
     return (
       <div className="App">
         <div className="content-1">
@@ -72,8 +98,13 @@ class App extends Component {
             carro={this.state.carro}
             esCarroVisible={esCarroVisible}
             mostrarCarro={this.mostrarCarro}
+            usuarioAutenticado={usuarioAutenticado}
+            cerrarSesion={this.cerrarSesion}
+            verificarSesion={this.verificarSesion}
           />
-          <h1 className="titulo">Productos del campo</h1>
+          <h1 className="titulo">
+            {usuario ? `Bienvenido, ${usuario.nombre}` : "Productos del campo"}
+          </h1>
           <VerProductos scrollToProductos={this.scrollToProductos} />
         </div>
 

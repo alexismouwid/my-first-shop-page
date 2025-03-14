@@ -13,6 +13,8 @@ const styles = {
     right: 50,
     backdropFilter: "blur(5px)" /* Desenfoque del fondo */,
     border: "1px solid rgba(255, 255, 255, 0.2)",
+    maxHeight: "300px",
+    overflowY: "auto",
   },
 
   ul: {

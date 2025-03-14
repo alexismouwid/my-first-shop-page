@@ -1,4 +1,4 @@
-import React, { Component, createRef } from "react";
+import React, { Component } from "react";
 import Logo from "./Logo";
 import "./Navbar.css";
 import Carro from "./Carro";
@@ -11,9 +11,14 @@ class Navbar extends Component {
     mostrarRegistro: false,
   };
 
+
+ 
+
+
   toggleFormulario = () => {
     this.setState((prevState) => ({
       mostrarFormulario: !prevState.mostrarFormulario,
+      mostrarRegistro: false,
     }));
   };
 
@@ -23,23 +28,36 @@ class Navbar extends Component {
       mostrarFormulario: false,
     }));
   };
-  render() {
-    const { carro, esCarroVisible, mostrarCarro } = this.props;
-    const { mostrarFormulario, mostrarRegistro } = this.state;
 
+  render() {
+    const { carro, esCarroVisible, mostrarCarro, usuarioAutenticado, cerrarSesion, verificarSesion} = this.props;
+    const { mostrarFormulario, mostrarRegistro} =
+      this.state;
+console.log(usuarioAutenticado);
     return (
-      <nav ref={this.navRef} className="navbar">
+      <nav className="navbar">
         <Logo />
         <h1>PROMOCIONES</h1>
         <h1>HAZ TU PEDIDO</h1>
-        <FormularioLogin
-          mostrarFormulario={mostrarFormulario}
-          toggleFormulario={this.toggleFormulario}
-        />
-        <FormularioRegistro
-          mostrarRegistro={mostrarRegistro}
-          toggleRegistro={this.toggleRegistro}
-        />
+
+        {!usuarioAutenticado ? (
+          <>
+            <FormularioLogin
+              mostrarFormulario={mostrarFormulario}
+              toggleFormulario={this.toggleFormulario}
+              verificarSesion={verificarSesion} // Pasamos la funció
+            />
+            <FormularioRegistro
+              mostrarRegistro={mostrarRegistro}
+              toggleRegistro={this.toggleRegistro}
+            />
+          </>
+        ) : (
+          <button className="cerrar-sesion" onClick={cerrarSesion}>
+            Cerrar Sesión
+          </button>
+        )}
+
         <Carro
           carro={carro}
           esCarroVisible={esCarroVisible}

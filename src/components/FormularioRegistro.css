@@ -2,6 +2,17 @@
   position: relative;
   display: inline-block;
   cursor: pointer;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  color: white;
+  padding: 0, auto;
+  margin: 0, auto;
+  border-radius: 5px;
+  width: 300px;
+  right: 100;
+  position: relative;
+  padding: 10px;
 }
 
 .register-title {
@@ -12,8 +23,8 @@
  background-color: rgba(0, 0, 0, 0.1);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  width: 300px;
-  height: 180px;
+  width: 320px;
+  height: 220px;
   backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   position: absolute;
