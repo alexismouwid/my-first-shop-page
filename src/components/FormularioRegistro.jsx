@@ -47,7 +47,7 @@ class FormularioRegistro extends Component {
         </h1>
 
         {mostrarRegistro && ( // Usa mostrarRegistro en lugar de mostrarFormulario
-          <form className="formulario-registro" onSubmit={this.handleSubmit}>
+          <form className="formulario-register" onSubmit={this.handleSubmit}>
             <input
               type="text"
               name="nombre"
