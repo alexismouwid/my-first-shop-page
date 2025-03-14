@@ -1,12 +1,42 @@
-# React + Vite
+<h1> Tecnologias </h1>
+<h2> Backend </h2>
+<ul> 
+  <li> 
+Express
+</li>
+  <li> 
+Mongoose
+</li>
+  <li> 
+Bcrypt
+</li>
+  <li> 
+Jsonwebtoken
+</li>
+  <li> 
+Jwt-express
+</li>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+  </ul>
+ <h2> Frontend </h2>
+<ul> 
+  <li> 
+    React + Vite
+  </li>
+                        <li> ScrollReveal</li>
+<li> Axios </li>
+</ul>
+</h1>
 
-Currently, two official plugins are available:
+<h1> Shop Page Productos del Campo</h1>
+<h1> Funciones </h1>
+  <ul>
+<li>Registro de usuarios</li>
+<li>Autenticacion</li>   
+<li>Encriptación de contraseñas</li>
+<li>Carrito de compras</li>
+<li>Catalogo de productos</li>
+  </ul>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| ![Start](/public/screen.jpg) | ![Productos](/public/screen2.jpg) |
+|-----------------------|----------------------------|
