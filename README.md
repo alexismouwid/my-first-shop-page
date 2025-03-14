@@ -37,12 +37,15 @@ _Una linda página web en la que el usuario podrá llevar a su casa de forma fá
 
   **Inicio de página** 👌
 ![Start](/public/screen.jpg) 
-**Catalogo de productos**
-![Productos](/public/screen2.jpg) 
+**Registro de usuario**
+![Productos](/public/registro.jpg)
+**Login de usuario**
+![Productos](/public/loginuser.jpg)
 **Usuario autenticado**
-![Catalogo](/public/screen3.jpg) 
-**Final de página**
+![Catalogo](/public/loginautenticado.jpg) 
+**Carrito de compras / Final de página**
 ![Carro](/public/screen4.jpg) 
+
 
   
 ## Status 🔓
