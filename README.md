@@ -1,57 +1,65 @@
-# Tienda de frutas y verduras 🥦🥗  
+# 🥦🥗 Tienda de Frutas y Verduras  
 
+## 📌 Descripción  
 
-# Descripcción 📌 
+🌱 Una tienda en línea donde los usuarios pueden explorar un catálogo de frutas y verduras, agregarlas a su carrito y realizar pedidos de forma fácil y didáctica. Además, pueden registrarse e iniciar sesión para acceder a funcionalidades personalizadas.  
 
-_Una linda página web en la que el usuario podrá llevar a su casa de forma fácil y didactica las distintas frutas y verduras exhibidas en el catalogo_
+---
 
+# 🛠️ Tecnologías  
 
- 
-# Tecnologias 🛠️
-**Backend** 
-- Express: Usamos la API de Express para hacer peticiones a MongoDB.
-- Mongoose: Usamos Mongoose para conectarnos a MondoDB.
-- Bcrypt: Usamos Bcrypt para encriptar la contraseña de nuevos usuarios
-- Jsonwebtoken: Le asignamos un token unico a los usuarios para su debida autenticación.
-- Jwt-express: No me acuerdo que hace esto.
-- Cors: Permite conectar el Frontend con el Backend.
+### 🔹 **Backend**  
+- ⚡ **Express**: API para gestionar las peticiones al servidor.  
+- 🗄️ **Mongoose**: Conexión y manejo de la base de datos en MongoDB.  
+- 🔑 **Bcrypt**: Encriptación de contraseñas para mayor seguridad.  
+- 🔐 **Jsonwebtoken (JWT)**: Generación de tokens para autenticación de usuarios.  
+- 🛡️ **Jwt-express**: Middleware de autenticación (sí, ¡ahora sabemos para qué sirve! 😆).  
+- 🔄 **Cors**: Habilita la comunicación entre el frontend y backend.  
 
+### 🔹 **Frontend**  
+- ⚛️ **React**: Construcción de la interfaz de usuario de manera dinámica.  
+- 🔗 **Axios**: Manejo de las solicitudes HTTP entre frontend y backend.  
 
-**Frontend**
-  
-- React: React puro y duro, y todo lo que lleva esto.     
--  Axios: Hace llamadas desde el Frontend al Backend.
+---
 
-  
-  **Funciones** 🚀
- 
-- Registro: Permite al usuario registrarse a la base de datos para poder inicir sesión y tener una linda bienvenida con su nombre. 
-- Login: El usuario podrá iniciar sesión  y así desbloquear el botón de mis pedidos, én el cual podrá ver el estado de ellos.
-- Autenticacion: El usuario es autenticado con tokens para el ingreso a la página.  
-- Encriptación: La contraseña del usuario es encriptada de manera que sus credenciales en la base de datos estarán protegidas en la base de datos.
-- Carrito de compras: Un menú desplegable que permitirá ver los productos que el usuario ingrese, dandole la cantidad, precio, y su total a pagar.
+# 🚀 Funcionalidades  
 
- ## Visite mi desploy
- 
-[Desploy](https://my-first-shop-page.vercel.app/)
- 
-## Screenshots 💻
+- 👤 **Registro e inicio de sesión**: Los usuarios pueden registrarse e iniciar sesión para acceder a sus pedidos y recibir una bienvenida personalizada.  
+- 🔐 **Autenticación con tokens**: Seguridad reforzada mediante tokens para gestionar el acceso.  
+- 🔒 **Encriptación de contraseñas**: Protección de credenciales en la base de datos.  
+- 🛒 **Carrito de compras**: Un menú desplegable donde los usuarios pueden visualizar sus productos agregados, cantidad, precio y total a pagar.  
+- 📦 **Gestión de pedidos**: Los usuarios autenticados pueden ver el estado de sus compras.  
+- 🌍 **Diseño responsivo**: Adaptado para usarse en distintos dispositivos.  
 
-  **Inicio de página** 👌
-![Start](/public/screen.jpg) 
-**Registro de usuario**
-![Productos](/public/registro.jpg)
-**Login de usuario**
-![Productos](/public/loginuser.jpg)
-**Usuario autenticado**
-![Catalogo](/public/loginautenticado.jpg) 
-**Carrito de compras / Final de página**
-![Carro](/public/screen4.jpg) 
+---
 
+## 🌍 Visite mi Deploy  
+👉 [**Desploy**](https://my-first-shop-page.vercel.app/)  
 
-  
-## Status 🔓
- **NO TERMINADO**  ☕
+---
+
+## 💻 Screenshots  
+
+### 👌 Inicio de página  
+![Start](/public/screen.jpg)  
+
+### 📝 Registro de usuario  
+![Registro](/public/registro.jpg)  
+
+### 🔑 Login de usuario  
+![Login](/public/loginuser.jpg)  
+
+### ✅ Usuario autenticado  
+![Autenticado](/public/loginautenticado.jpg)  
+
+### 🛍️ Carrito de compras / Final de página  
+![Carro](/public/screen4.jpg)  
+
+---
+
+## 🔓 Estado del Proyecto  
+**⏳ NO TERMINADO** ☕  
+
  
 
 
