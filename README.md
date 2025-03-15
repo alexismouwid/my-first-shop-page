@@ -31,7 +31,9 @@ _Una linda página web en la que el usuario podrá llevar a su casa de forma fá
 - Encriptación: La contraseña del usuario es encriptada de manera que sus credenciales en la base de datos estarán protegidas en la base de datos.
 - Carrito de compras: Un menú desplegable que permitirá ver los productos que el usuario ingrese, dandole la cantidad, precio, y su total a pagar.
 
+ ## Visite mi desploy
  
+[Desploy](https://my-first-shop-page.vercel.app/)
  
 ## Screenshots 💻
 
