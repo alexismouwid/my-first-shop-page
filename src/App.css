@@ -52,7 +52,7 @@ html{
     color: #fff;
     font-size: 90px;
     position: relative;
-    top: 55%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -61,10 +61,104 @@ html{
   }
   .titulo:hover{
     color: green;
-    font-size: 101px;
+    font-size: 95px;
     position: relative;
-    top: 55%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     border: none;
   }
+
+
+
+
+/* 🖥️🔹 Monitores grandes y 4K */
+@media (min-width: 1920px) {
+  .titulo{
+
+  font-size: 180px;
+  }
+  .titulo:hover{
+    font-size: 185px;
+  }
+}
+
+/* 💻🔹 Laptops y pantallas Full HD */
+@media (max-width: 1920px) and (min-width: 1367px) {
+  .titulo{
+    font-size: 120px;
+  }
+  .titulo:hover{
+    font-size: 125px;
+  }
+  
+}
+
+/* 🖥️🔹 Laptops pequeñas y tablets grandes */
+@media (max-width: 1366px) and (min-width: 1025px) {
+    .titulo{
+    font-size: 90px;
+  }
+  .titulo:hover{
+    font-size: 95px;
+  }
+
+}
+
+/* 📟🔹 Tablets medianas */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .titulo{
+    position: relative;
+    top: 250px;
+    font-size: 70px;
+  }
+  .titulo:hover{
+    position: relative;
+    top: 250px;
+    font-size: 75px;
+  }
+  
+  
+  
+  
+}
+
+/* 📱🔹 Móviles grandes */
+@media (max-width: 768px) and (min-width: 601px) {
+  .titulo{
+    display: none;
+    font-size: 45px;
+  }
+  .titulo:hover{
+    font-size: 50px;
+  }
+}
+
+/* 📱🔹 Móviles pequeños */
+@media (max-width: 600px) {
+
+  .titulo{
+    display: none;
+    font-size: 30px;
+  }
+  .titulo:hover{
+    font-size: 35px;
+  }
+  
+}
+
+/* 📱🔹 Móviles ultra pequeños (Ej: iPhone SE, 320px) */
+@media (max-width: 400px) {
+  
+  .titulo{
+    display: none;
+    font-size: 20px;
+  }
+  .titulo:hover{
+    font-size: 25px;
+  }
+  
+}
+
+
+

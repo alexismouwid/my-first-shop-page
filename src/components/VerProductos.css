@@ -19,3 +19,18 @@
   background-color: #fff;
   color: #000000;
 }
+
+@media (max-width: 1024px) {
+  .btn-productos{
+    font-size: 15px;
+  }
+   }
+
+/* 🔹 Para móviles (máx 600px): 1 columna, bien centrado */
+@media (max-width: 600px) {
+  .btn-productos{
+    font-size: 10px;
+    position: relative;
+    top: 500px;
+  }   
+

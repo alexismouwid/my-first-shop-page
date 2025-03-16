@@ -1,73 +1,245 @@
-@keyframes slideDown {
-  from {
-    transform: translateY(-100px); /* 🔹 Empieza fuera de la pantalla */
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0); /* 🔹 Llega a su posición normal */
-    opacity: 1;
-  }
-}
-
-
-
+/* 🔹 NAVBAR Estilo Base */
 .navbar {
-  animation: slideDown 1s ease-in-out; /* 🔥 Aplica la animación */
+  animation: slideDown 1s ease-in-out;
   color: #fff;
-  background-color: rgba(0, 0, 0, 0.1); /* 🔹 Fondo semitransparente */
-  padding: 0 30px;
-  margin: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
   position: fixed;
   width: 100%;
-  height: 100px;
+  height: 60px;
   top: 0;
   left: 0;
-  backdrop-filter: blur(3px); /* 🔹 Efecto desenfoque */
+  backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  min-height: 60px;
   transition: all 0.3s ease-in-out;
+  overflow: visible;
+  flex-wrap: nowrap;
 }
 
-/* 🔹 Ocultar navbar en el primer scroll */
-.navbar.hidden {
-  display: none;
-}
-
-/* 🔹 Cambiar navbar en la segunda sección */
-.navbar.scrolled {
+/* Contenedor de elementos */
+.navbar-container {
   display: flex;
-  background-color: #000 !important; /* 🔥 Fondo sólido */
-  backdrop-filter: none !important; /* 🔥 Quitar desenfoque */
-  border: none !important; /* 🔥 Quitar borde */
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.cerrar-sesion{
+/* 🔹 LOGO */
+.logo img {
+  width: clamp(40px, 5vw, 100px);
+  height: auto;
+}
+
+/* 🔹 ENLACES */
+.nav-links {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: nowrap;
+}
+
+.nav-links h1 {
+  font-size: clamp(12px, 2vw, 20px);
+  min-width: 80px;
+  white-space: nowrap;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  color: white;
+}
+
+/* 🔹 CARRITO */
+.carro {
+  position: fixed;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 60px;
+  gap: 10px;
+  z-index: 1200;
+}
+
+/* 🔹 BOTÓN */
+.cerrar-sesion {
   background-color: #4CAF50;
   border: none;
   color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 10px;
-  margin: 4px 2px;
   cursor: pointer;
-  position: relative;
-  transition: 0.3s ease-in-out;
   border-radius: 5px;
+  padding: 8px 15px;
+  font-size: 14px;
 }
 
-
-nav h1: {
-  transition: 0.5s ease-in-out;
+/* 🖥️🔹 Para monitores grandes y 4K */
+@media (min-width: 1920px) {
+  .navbar {
+    padding: 20px 40px;
+  }
+  .nav-links h1 {
+    font-size: 24px;
+  }
 }
-nav h1:hover {
 
-  color: green;
-
+/* 💻🔹 Para laptops y pantallas Full HD */
+@media (max-width: 1920px) and (min-width: 1367px) {
+  .navbar {
+    padding: 15px 30px;
+  }
+  .nav-links h1 {
+    font-size: 20px;
+  }
 }
 
+/* 🖥️🔹 Para laptops pequeñas y tablets grandes */
+@media (max-width: 1366px) and (min-width: 1025px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+  .nav-links h1 {
+    font-size: 18px;
+  }
+}
 
+/* 📟🔹 Para tablets medianas */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-around;
+    padding-right: 40px;
+  }
+ .register{
+  font-size: 10px;
+  position: relative;
+  right: 150px;
+ }
+  .nav-links h1 {
+    font-size: 10px;
+  }
+  .carro {
+    min-width: 50px;
+    gap: 5px;
+    padding: 10px;
+  }
+}
+
+/* 📱🔹 Para móviles grandes */
+@media (max-width: 768px) and (min-width: 601px) {
+  .navbar-container {
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .navbar {
+
+    position: relative;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+  .nav-links {
+    position: relative;
+    right: 15px;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .carro {
+    width: 100%;
+    justify-content: center;
+    position: relative;
+  }
+}
+
+/* 📱🔹 Para móviles pequeños (600px o menos) */
+@media (max-width: 600px) {
+
+  .navbar-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .navbar {
+    position: relative;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+  }
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+  }
+  .carro {
+    position: relative;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* 📱🔹 Para móviles ultra pequeños (Ej: iPhone SE, 320px) */
+@media (max-width: 400px) { 
+  .navbar-container {
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .navbar {
+
+    position: relative;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+  .nav-links {
+    position: relative;
+    right: 15px;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .carro {
+    width: 100%;
+    justify-content: center;
+    position: relative;
+  }
+
+  .nav-links h1 {
+    font-size: 14px;
+  }
+  .logo img {
+    width: 40px;
+  }
+}
 

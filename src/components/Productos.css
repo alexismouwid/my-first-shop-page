@@ -1,24 +1,38 @@
-
 @keyframes aparecer {
     from {
-        left: -50px;
+        transform: translateX(-50px);
         opacity: 0;
     }
     to {
-        right: 50;
+        transform: translateX(0);
         opacity: 1;
     }
 }
 
-
-
+/* 🛒 Contenedor de productos */
 .productos {
-
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    width: 100%;
-  }
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas en PC */
+    gap: 20px; /* Reducido para menos separación */
+    margin: 30px auto; /* Centrar */
+    width: 90%; /* Para que no ocupe todo el ancho */
+    max-width: 1200px; /* Máximo para evitar que se extienda demasiado */
+}
 
+/* 🔹 Para tablets (máx 1024px): 2 columnas, más centrado */
+@media (max-width: 1024px) {
+    .productos {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 750px; /* Reduce el ancho para centrar más */
+        gap: 15px; /* Menos espacio entre elementos */
+    }
+}
+
+/* 🔹 Para móviles (máx 600px): 1 columna, bien centrado */
+@media (max-width: 600px) {
+    .productos {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 450px; /* Ajusta para móviles */
+        gap: 8px; /* Menos espacio entre productos */
+    }
+}

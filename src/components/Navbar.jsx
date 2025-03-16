@@ -11,10 +11,6 @@ class Navbar extends Component {
     mostrarRegistro: false,
   };
 
-
- 
-
-
   toggleFormulario = () => {
     this.setState((prevState) => ({
       mostrarFormulario: !prevState.mostrarFormulario,
@@ -30,42 +26,64 @@ class Navbar extends Component {
   };
 
   render() {
-    const { carro, esCarroVisible, mostrarCarro, usuarioAutenticado, cerrarSesion, verificarSesion} = this.props;
-    const { mostrarFormulario, mostrarRegistro} =
-      this.state;
-console.log(usuarioAutenticado);
+    const {
+      carro,
+      esCarroVisible,
+      mostrarCarro,
+      usuarioAutenticado,
+      cerrarSesion,
+      verificarSesion,
+    } = this.props;
+    const { mostrarFormulario, mostrarRegistro } = this.state;
+
     return (
       <nav className="navbar">
-        <Logo />
-        <h1>PROMOCIONES</h1>
-        <h1>HAZ TU PEDIDO</h1>
+        <div className="navbar-container">
+         
 
-        {!usuarioAutenticado ? (
-          <>
-            <FormularioLogin
-              mostrarFormulario={mostrarFormulario}
-              toggleFormulario={this.toggleFormulario}
-              verificarSesion={verificarSesion} // Pasamos la funció
-            />
-            <FormularioRegistro
-              mostrarRegistro={mostrarRegistro}
-              toggleRegistro={this.toggleRegistro}
-            />
-          </>
-        ) : (
-          <button className="cerrar-sesion" onClick={cerrarSesion}>
-            Cerrar Sesión
-          </button>
-        )}
+          <ul className="nav-links">
+            <li> 
+            <Logo />
+          </li>
+            <li><h1>HAZ TU PEDIDO</h1></li>
 
-        <Carro
-          carro={carro}
-          esCarroVisible={esCarroVisible}
-          mostrarCarro={mostrarCarro}
-        />
+            {usuarioAutenticado ? (
+              <>
+                <li>
+                  <button className="cerrar-sesion" onClick={cerrarSesion}>
+                    Cerrar Sesión
+                  </button>
+                </li>
+                <li className="carro">
+                  <Carro carro={carro} esCarroVisible={esCarroVisible} mostrarCarro={mostrarCarro} />
+                </li>
+              </>
+            ) : (
+              <>
+                <li className="login"> 
+                  <FormularioLogin
+                    mostrarFormulario={mostrarFormulario}
+                    toggleFormulario={this.toggleFormulario}
+                    verificarSesion={verificarSesion}
+                  />
+                </li>
+                <li className="register">
+                  <FormularioRegistro
+                    mostrarRegistro={mostrarRegistro}
+                    toggleRegistro={this.toggleRegistro}
+                  />
+                </li>
+                <li className="carro">
+                  <Carro carro={carro} esCarroVisible={esCarroVisible} mostrarCarro={mostrarCarro} />
+                </li>
+              </>
+            )}
+          </ul>
+        </div>
       </nav>
     );
   }
 }
 
 export default Navbar;
+

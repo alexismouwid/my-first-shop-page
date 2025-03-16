@@ -111,7 +111,6 @@ this.verificarSesion();
         {/* 🔹 Referencia a la sección de productos */}
         <div ref={this.productosRef}>
           <Layout>
-            <Title />
             <Productos
               agregarAlCarro={this.agregarAlCarro}
               productos={this.state.productos}
