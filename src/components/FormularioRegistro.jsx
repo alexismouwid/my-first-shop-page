@@ -75,10 +75,18 @@ class FormularioRegistro extends Component {
               onChange={this.handleChange}
               required
             />
-            <button type="submit" className="btn">
+            <div className="botones-container">
+              <button type="submit" className="registrar">
               Registrarse
             </button>
-            {error && <p className="error-message">{error}</p>}
+
+              <button type="button" className="cerrar" onClick={toggleRegistro}>
+                x
+              </button>
+
+
+            </div> 
+                        {error && <p className="error-message">{error}</p>}
           </form>
         )}
       </div>
