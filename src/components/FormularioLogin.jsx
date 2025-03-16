@@ -17,8 +17,7 @@ class FormularioLogin extends Component {
     e.preventDefault();
 
     const { email, password } = this.state;
-    const { verificarSesion, toggleFormulario, usuarioAutenticado } =
-      this.props; // Recibe desde Navbar
+    const { verificarSesion, toggleFormulario } = this.props;
 
     try {
       const response = await axios.post("http://localhost:3000/login", {
@@ -32,20 +31,19 @@ class FormularioLogin extends Component {
       const { token, nombre } = response.data;
 
       if (!token || !nombre) {
-        console.error("El backen no envió la respuesta esperada");
+        console.error("El backend no envió la respuesta esperada");
         return;
       }
 
-      localStorage.setItem("token", token); // Guarda solo el tokenX
-      localStorage.setItem("usuario", JSON.stringify({ nombre })); // Guarda el nombre
+      localStorage.setItem("token", token);
+      localStorage.setItem("usuario", JSON.stringify({ nombre }));
       this.setState({ message: `Bienvenido, ${nombre}` });
 
-      verificarSesion(); // Actualiza el estado en NavbarW
-      toggleFormulario(); // Cierra el formulario de login
+      verificarSesion();
+      toggleFormulario(); // Cierra el formulario después de iniciar sesión
       window.location.reload();
     } catch (error) {
       console.error("Error en la autenticación:", error);
-
       this.setState({ message: "Usuario y/o contraseña incorrectos" });
     }
   };
@@ -79,10 +77,16 @@ class FormularioLogin extends Component {
               onChange={this.handleChange}
               required
             />
-            <button type="submit" className="btn">
-              Entrar
-            </button>
-            <p>{this.state.message}</p>
+            {/* 🆕 Botones alineados */}
+            <div className="botones-container">
+              <button type="submit" className="entrar">
+                Entrar
+              </button>
+              <button type="button" className="salir" onClick={toggleFormulario}>
+                x
+              </button>
+            </div>
+            <p className="message">{this.state.message}</p>
           </form>
         )}
       </div>
@@ -91,3 +95,4 @@ class FormularioLogin extends Component {
 }
 
 export default FormularioLogin;
+

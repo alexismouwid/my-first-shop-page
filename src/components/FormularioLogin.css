@@ -15,14 +15,14 @@
 
 .formulario-login{
  background-color: rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
   border-radius: 5px;
   width: 280px;
-  height: 130px;
+  height: 140px;
   backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   position: absolute;
-  top: 100px;
+  top: 27px;
   right: 0;
   padding: 20px 20px;
   font-size: 12px;
@@ -37,24 +37,6 @@
   border-radius: 5px;
   background-color: #f8f8f8;
 }
-
-.btn {
-
-  width: 100%;
-  padding: 8px;
-  background-color: green;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
-}
-
-.btn:hover {
-  color: black;
-  background-color: darkgreen;
-}
-
 
 //Hacemos la pagina responsive
 @media (max-width: 1024px) { 
@@ -85,10 +67,54 @@
 
 
 }
+.botones-container{
+
+  display: flex;
+  justify-content: space-around;
+}
+.entrar{
+
+  width: 20%;
+  padding: 8px;
+  margin: 20 auto;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.entrar:hover {
+  color: black;
+  background-color: darkgreen;
+}
 
 
 
 
+.salir {
+ 
+  width: 20%;
+  padding: 8px;
+  border-radius: 5px;
+
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+
+ }
+
+.salir:hover {
+  background-color: darkred;
+  color: black;
+}
+
+.message{
+  color: green bold;
+}
 
 
 @media (max-width: 600px){
