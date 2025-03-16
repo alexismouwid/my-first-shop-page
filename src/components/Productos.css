@@ -9,30 +9,132 @@
     }
 }
 
-/* 🛒 Contenedor de productos */
-.productos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas en PC */
-    gap: 20px; /* Reducido para menos separación */
-    margin: 30px auto; /* Centrar */
-    width: 90%; /* Para que no ocupe todo el ancho */
-    max-width: 1200px; /* Máximo para evitar que se extienda demasiado */
-}
 
-/* 🔹 Para tablets (máx 1024px): 2 columnas, más centrado */
-@media (max-width: 1024px) {
-    .productos {
-        grid-template-columns: repeat(2, 1fr);
-        max-width: 750px; /* Reduce el ancho para centrar más */
-        gap: 15px; /* Menos espacio entre elementos */
-    }
-}
+.productos{
 
-/* 🔹 Para móviles (máx 600px): 1 columna, bien centrado */
-@media (max-width: 600px) {
-    .productos {
+     position: relative;
+     width: 100%;
+     height: 100%;
+     display: grid;
         grid-template-columns: repeat(3, 1fr);
-        max-width: 450px; /* Ajusta para móviles */
-        gap: 8px; /* Menos espacio entre productos */
-    }
+        margin: 50px auto;
+        max-width: 1920px; /* Ajusta para móviles */
+        gap: 50px; /* Menos espacio entre productos */
 }
+/* 🖥️🔹 Monitores grandes y 4K */
+@media (min-width: 1920px) {
+ .productos {
+
+        
+     position: relative;
+     right: 180px;
+     width: 100%;
+     height: 100%;
+     display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin: 50px auto;
+        max-width: 1920px; /* Ajusta para móviles */
+        gap: 50px; /* Menos espacio entre productos */
+    }
+
+
+
+   }
+
+/* 💻🔹 Laptops y pantallas Full HD */
+@media (max-width: 1920px) and (min-width: 1367px) {
+.productos {
+
+        
+     position: relative;
+     width: 100%;
+     height: 100%;
+     display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin: 50px auto;
+        max-width: 1920px; /* Ajusta para móviles */
+        gap: 10px; /* Menos espacio entre productos */
+    }
+
+
+ 
+}
+
+/* 🖥️🔹 Laptops pequeñas y tablets grandes */
+@media (max-width: 1366px) and (min-width: 1025px) {
+.productos {
+
+        
+     position: relative;
+     right: 60px;
+     display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin: 50px auto;
+        max-width: 1366px; /* Ajusta para móviles */
+        min-width: 1025px;
+        gap: 10px; /* Menos espacio entre productos */
+    }
+
+
+  
+}
+
+/* 📟🔹 Tablets medianas */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .productos {
+        position: relative;
+        left: 4%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1024px; /* Reduce el ancho para centrar más */
+        min-width: 769px;
+        gap: 0px; /* Menos espacio entre elementos */
+    }
+
+  
+  
+}
+
+/* 📱🔹 Móviles grandes */
+@media (max-width: 768px) and (min-width: 601px) {
+  .productos {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 768px;
+    }
+
+} 
+/* 📱🔹 Móviles pequeños */
+@media (max-width: 600px) {
+  .productos {
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        align-items: center;
+margin: 50 auto;
+
+  position: relative;
+        display: grid;
+gap: 20px;
+        max-width: 40px; /* Ajusta para móviles */
+    }
+ 
+}
+
+/* 📱🔹 Móviles ultra pequeños (Ej: iPhone SE, 320px) */
+@media (max-width: 400px) {
+.productos {
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-items: center;
+margin: 50 auto;
+
+  position: relative;
+        display: grid;
+gap: 10px;
+        max-width: 40px; /* Ajusta para móviles */
+    }
+
+   
+}
+
+
+

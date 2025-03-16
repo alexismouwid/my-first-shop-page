@@ -86,6 +86,9 @@
   .nav-links h1 {
     font-size: 24px;
   }
+  .carro{
+    padding: 50px
+  }
 }
 
 /* 💻🔹 Para laptops y pantallas Full HD */
@@ -95,6 +98,9 @@
   }
   .nav-links h1 {
     font-size: 20px;
+  }
+  .carro{
+    padding: 20px;
   }
 }
 
@@ -164,8 +170,8 @@
     justify-content: center;
     position: relative;
   }
-}
 
+}
 /* 📱🔹 Para móviles pequeños (600px o menos) */
 @media (max-width: 600px) {
 

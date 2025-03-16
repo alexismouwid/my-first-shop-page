@@ -27,7 +27,7 @@ const Producto = ({ producto, agregarAlCarro }) => {
       margin: isMobile ? "5px" : "10px",
       borderRadius: "5px",
       boxShadow: "0px 0px 5px 0px rgba(0,0,0,0.75)",
-      width: isMobile ? "120px" : "300px",
+      width: isMobile ? "150px" : "280px",
     },
     img: {
       width: "100%",
