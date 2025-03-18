@@ -17,7 +17,7 @@ class FormularioLogin extends Component {
     e.preventDefault();
 
     const { email, password } = this.state;
-    const { verificarSesion, toggleFormulario } = this.props;
+    const { verificarSesion, toggleLogin , mostrarLogin} = this.props;
 
     try {
       const response = await axios.post("http://localhost:3000/login", {
@@ -40,7 +40,7 @@ class FormularioLogin extends Component {
       this.setState({ message: `Bienvenido, ${nombre}` });
 
       verificarSesion();
-      toggleFormulario(); // Cierra el formulario después de iniciar sesión
+      toggleLogin(); // Cierra el formulario después de iniciar sesión
       window.location.reload();
     } catch (error) {
       console.error("Error en la autenticación:", error);
@@ -49,15 +49,15 @@ class FormularioLogin extends Component {
   };
 
   render() {
-    const { mostrarFormulario, toggleFormulario } = this.props;
+    const { mostrarLogin, toggleLogin } = this.props;
 
     return (
       <div className="formulario-container">
-        <h1 className="login-title" onClick={toggleFormulario}>
+        <h1 className="login-title" onClick={toggleLogin}>
           INICIAR SESIÓN
         </h1>
 
-        {mostrarFormulario && (
+        {mostrarLogin && (
           <form className="formulario-login" onSubmit={this.handleSubmit}>
             <input
               type="email"
@@ -82,7 +82,7 @@ class FormularioLogin extends Component {
               <button type="submit" className="entrar">
                 Entrar
               </button>
-              <button type="button" className="salir" onClick={toggleFormulario}>
+              <button type="button" className="salir" onClick={toggleLogin}>
                 x
               </button>
             </div>

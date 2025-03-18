@@ -1,8 +1,7 @@
-/* 🔹 NAVBAR Estilo Base */
 .navbar {
   animation: slideDown 1s ease-in-out;
   color: #fff;
-  background-color: rgba(0, 0, 0, 0. 0);
+  background-color: rgba(0, 0, 0, 0.7);
   padding: 10px 20px;
   position: fixed;
   width: 100%;
@@ -10,268 +9,221 @@
   top: 0;
   left: 0;
   backdrop-filter: blur(2px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  min-height: 60px;
-  transition: all 0.3s ease-in-out;
-  overflow: visible;
-  flex-wrap: nowrap;
+  justify-content: space-between;
+  z-index: 1000;
 }
 
-/* Contenedor de elementos */
+.carro-movil {
+  display: none; }
+
+  .carro {
+    display :block;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    gap: 10px;
+    z-index: 1200;
+    color: white;
+  }
+
 .navbar-container {
   display: flex;
   align-items: center;
   width: 100%;
   justify-content: space-between;
-  flex-wrap: wrap;
 }
 
-/* 🔹 LOGO */
 .logo img {
   width: clamp(40px, 5vw, 100px);
   height: auto;
 }
 
-/* 🔹 ENLACES */
 .nav-links {
   display: flex;
   gap: 15px;
-  align-items: center;
-  justify-content: center;
   list-style: none;
-  flex-wrap: nowrap;
 }
 
 .nav-links h1 {
   font-size: clamp(12px, 2vw, 20px);
-  min-width: 80px;
-  white-space: nowrap;
-  text-align: center;
   cursor: pointer;
   transition: 0.5s ease-in-out;
   color: white;
 }
 
-/* 🔹 CARRITO */
-.carro {
+/* 🔹 Botón Hamburguesa (solo móvil) */
+.menu-icon {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+
+@media (max-width: 1024px) and (min-width: 769px) { 
+  .carro{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    gap: 10px;
+    z-index: 1200;
+    color: white;
+  }
+}
+/* 📱🔹 Responsive */
+@media (max-width: 768px) {
+
+  .carro {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: -100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 20px 0;
+    transition: left 0.3s ease-in-out;
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+  .carro-movil{
+    display: block;
   position: fixed;
-  right: 50px;
+  right: -30px;
+  top: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 60px;
+  font-size: 20px;
   gap: 10px;
   z-index: 1200;
-}
-
-/* 🔹 BOTÓN */
-.cerrar-sesion {
-  background-color: #4CAF50;
-  border: none;
   color: white;
-  cursor: pointer;
-  border-radius: 5px;
-  padding: 8px 15px;
-  font-size: 14px;
 }
 
-/* 🖥️🔹 Para monitores grandes y 4K */
+}
+
+/* 🖥️🔹 Monitores grandes y 4K */
 @media (min-width: 1920px) {
-  .navbar {
-    padding: 20px 40px;
-  }
-  .nav-links h1 {
-    font-size: 24px;
-  }
-  .carro{
-    padding: 50px
-  }
-}
 
-/* 💻🔹 Para laptops y pantallas Full HD */
-@media (max-width: 1920px) and (min-width: 1367px) {
-  .navbar {
-    padding: 15px 30px;
-  }
-  .nav-links h1 {
-    font-size: 20px;
-  }
-  .carro{
-    padding: 20px;
-  }
-}
 
-/* 🖥️🔹 Para laptops pequeñas y tablets grandes */
-@media (max-width: 1366px) and (min-width: 1025px) {
-  .navbar {
-    padding: 10px 20px;
-  }
-  .nav-links h1 {
-    font-size: 18px;
-  }
-}
 
-/* 📟🔹 Para tablets medianas */
-@media (max-width: 1024px) and (min-width: 769px) {
-  .navbar {
-    flex-direction: row;
-    justify-content: space-around;
-    padding-right: 40px;
-  }
- .register{
-  font-size: 10px;
-  position: relative;
-  right: 150px;
  }
-  .nav-links h1 {
-    font-size: 10px;
-  }
-  .carro {
-    min-width: 50px;
-    padding: 10px;
-  }
+
+/* 💻🔹 Laptops y pantallas Full HD */
+@media (max-width: 1920px) and (min-width: 1367px) {
+   
 }
 
-/* 📱🔹 Para móviles grandes */
-@media (max-width: 768px) and (min-width: 601px) {
-  .navbar-container {
-    flex-direction: row;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-  }
-  .navbar {
-
-    position: relative;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-  }
-  .nav-links {W
-    position: relative;
-    right: 15px;
-    align-items: center;
-    justify-content: center;
-    justify-self: center;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .nav-links h1{
-    font-size: 25px;
-  }
-
-
+/* 🖥️🔹 Laptops pequeñas y tablets grandes */
+@media (max-width: 1366px) and (min-width: 1025px) {
   .carro {
-    width: 100%;
-    justify-content: center;
+    display: block;
     position: relative;
-  position: relative;
-    left: -30px;
-
-  }
-
-}
-/* 📱🔹 Para móviles pequeños (600px o menos) */
-@media (max-width: 600px) {
-
-  .navbar-container {
+    top: 10px;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .navbar {
-    position: relative;
-    left: -30px;
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 10px 15px;
     font-size: 20px;
-  }
-
-  .nav-links {
-    position: relative;
-    top: -30px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 25px;
-  }
-.nav-links h1 {
-    font-size: 15px;
-  }
-
-  .carro {
-    position: relative;
-    width: 100%;
-    justify-content: center;
-    position: relative;
-    left: -30px;
-    top: -20px;
-
-  }
-}
-
-/* 📱🔹 Para móviles ultra pequeños (Ej: iPhone SE, 320px) */
-@media (max-width: 400px) { 
-  .navbar-container {
-    flex-direction: row;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-  }
-  .navbar {
-
-    position: relative;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-  }
-  .nav-links {
-    position: relative;
-    right: 15px;
-    align-items: center;
-    justify-content: center;
-    justify-self: center;
-    flex-direction: column;
     gap: 10px;
-  }
-.nav-links h1 {
-    font-size: 10px;
-  }
-
-
-  .carro {
-    width: 100%;
-    align-items: center;
-    position: relative;
-    bottom: 10px;
-    left : -30px;
-  }
-
-  .nav-links h1 {
-    font-size: 15px;
-  }
-  .logo img {
-    width: 50px;
+    z-index: 1200;
+    color: white;
   }
 }
+
+/* 📟🔹 Tablets medianas */
+@media (max-width: 1024px) and (min-width: 769px) {
+    
+  
+  .carro {
+    display: block;
+    position: relative;
+    top: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    gap: 10px;
+    z-index: 1200;
+    color: white;
+  }
+}
+
+  
+}
+
+/* 📱🔹 Móviles grandes */
+@media (max-width: 768px) and (min-width: 601px) {
+   .carro{display: none;}
+ .carro-movil{
+    display: block;
+  position: fixed;
+  right: 20rem;
+  top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  gap: 10px;
+  z-index: 1200;
+  color: white;
+}
+}
+
+/* 📱🔹 Móviles pequeños */
+@media (max-width: 600px) {
+  .carro{display: none;}
+ .carro-movil{
+    display: block;
+  position: fixed;
+  right: 135px;
+  top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  gap: 10px;
+  z-index: 1200;
+  color: white;
+}
+
+}
+
+
+
+/* 📱🔹 Móviles ultra pequeños (Ej: iPhone SE, 320px) */
+@media (max-width: 400px) {
+  .carro{display: none;}
+ .carro-movil{
+    display: block;
+  position: fixed;
+  right: 120px;
+  top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  gap: 10px;
+  z-index: 1200;
+  color: white;
+}
+
+}
+
+    
 

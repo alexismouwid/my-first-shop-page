@@ -261,6 +261,7 @@ background-color:  white;
 @media (max-width: 1366px) and (min-width: 1025px) {
     .titulo{
     font-size: 90px;
+   
   }
   .titulo:hover{
     font-size: 95px;
@@ -354,13 +355,13 @@ background-color:  white;
 @media (max-width: 1024px) and (min-width: 769px) {
   .titulo{
     position: relative;
-    top: 250px;
-    font-size: 70px;
+    top: 20rem;
+    font-size: 100px;
   }
   .titulo:hover{
     position: relative;
-    top: 250px;
-    font-size: 75px;
+    top: 20rem;
+    font-size: 100px;
   }
   
   
@@ -453,11 +454,10 @@ background-color:  white;
 /* 📱🔹 Móviles grandes */
 @media (max-width: 768px) and (min-width: 601px) {
   .titulo{
-    display: none;
-    font-size: 45px;
+    font-size: 90px;
   }
   .titulo:hover{
-    font-size: 50px;
+    font-size: 90px;
   }
 .layout-btns{
   background-image: url("/fv.jpg");
@@ -548,11 +548,13 @@ background-color:  white;
 @media (max-width: 600px) {
 
   .titulo{
-    display: none;
-    font-size: 30px;
+    font-size: 60px;
+    position: relative;
+    top: 18rem;
+
   }
   .titulo:hover{
-    font-size: 35px;
+    font-size: 60px;
   }
   .layout-btns{
   background-image: url("/fv.jpg");
@@ -642,11 +644,10 @@ background-color:  white;
 @media (max-width: 400px) {
   
   .titulo{
-    display: none;
-    font-size: 20px;
+    font-size: 60px;
   }
   .titulo:hover{
-    font-size: 25px;
+    font-size: 60px;
   }
 
   .layout-btns{
@@ -731,7 +732,8 @@ background-color:  white;
     background-color:  white;
     color: black; 
 }
-}
+
+} 
 
 
 

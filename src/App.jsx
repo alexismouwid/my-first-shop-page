@@ -164,7 +164,7 @@ this.verificarSesion();
           <h1 className="titulo">
             {usuario ? `Bienvenido, ${usuario.nombre}` : "Productos del campo"}
           </h1>
-          <VerProductos scrollToProductos={this.scrollToProductos} />
+                    <VerProductos scrollToProductos={this.scrollToProductos} />
         </div>
 
         {/* 🔹 Referencia a la sección de productos */}
@@ -204,7 +204,6 @@ this.verificarSesion();
               agregarAlCarro={this.agregarAlCarro}
               frutas={this.state.frutas}
             />
-  <button className='ir-carro' onClick={this.scrollToCar}> Ir al pagar </button>
 
           </Layout>
         </div>

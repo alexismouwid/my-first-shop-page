@@ -52,7 +52,10 @@
   .titulo:hover{
     font-size: 95px;
   }
-
+.hola{
+  position: relative;
+  top: 300px;
+  font-size: 20px;
 }
 
 /* 📟🔹 Tablets medianas */
@@ -71,18 +74,19 @@
 @media (max-width: 768px) and (min-width: 601px) {
 
   .btn-productos{
-    position: relative;
-    top: -80px;
-    font-size: 8px;
+   position: relative;
+    top: 32rem;
+    left: 0px;
+    font-size: 40px;
   }
 } 
 /* 📱🔹 Móviles pequeños */
 @media (max-width: 600px) {
 .btn-productos{
-    position: relative;
-    top: -98px;
+   position: relative;
+    top: 32rem;
     left: 0px;
-    font-size: 8px;
+    font-size: 30px;
   } 
 
 
@@ -92,9 +96,9 @@
 @media (max-width: 400px) {
   .btn-productos{
     position: relative;
-    top: -70px;
+    top: 25rem;
     left: 0px;
-    font-size: 12px;
+    font-size: 30px;
   } 
 }
 
