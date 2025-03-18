@@ -80,8 +80,8 @@
 @media (max-width: 600px) {
 .btn-productos{
     position: relative;
-    top: -80px;
-    left: 30px;
+    top: -98px;
+    left: 0px;
     font-size: 8px;
   } 
 
@@ -92,8 +92,9 @@
 @media (max-width: 400px) {
   .btn-productos{
     position: relative;
-    top: -80px;
-    font-size: 8px;
+    top: -70px;
+    left: 0px;
+    font-size: 12px;
   } 
 }
 

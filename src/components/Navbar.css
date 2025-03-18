@@ -2,14 +2,14 @@
 .navbar {
   animation: slideDown 1s ease-in-out;
   color: #fff;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0. 0);
   padding: 10px 20px;
   position: fixed;
   width: 100%;
   height: 60px;
   top: 0;
   left: 0;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(2px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   display: flex;
   align-items: center;
@@ -58,7 +58,7 @@
 /* 🔹 CARRITO */
 .carro {
   position: fixed;
-  right: 20px;
+  right: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -131,7 +131,6 @@
   }
   .carro {
     min-width: 50px;
-    gap: 5px;
     padding: 10px;
   }
 }
@@ -156,7 +155,7 @@
     padding: 0;
     margin: 0;
   }
-  .nav-links {
+  .nav-links {W
     position: relative;
     right: 15px;
     align-items: center;
@@ -165,10 +164,18 @@
     flex-direction: column;
     gap: 10px;
   }
+  .nav-links h1{
+    font-size: 25px;
+  }
+
+
   .carro {
     width: 100%;
     justify-content: center;
     position: relative;
+  position: relative;
+    left: -30px;
+
   }
 
 }
@@ -184,25 +191,37 @@
   }
   .navbar {
     position: relative;
-    left: 0px;
+    left: -30px;
     width: 100%;
     height: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 15px;
+    padding: 10px 15px;
+    font-size: 20px;
   }
+
   .nav-links {
+    position: relative;
+    top: -30px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    gap: 10px;
+    gap: 25px;
   }
+.nav-links h1 {
+    font-size: 15px;
+  }
+
   .carro {
     position: relative;
     width: 100%;
     justify-content: center;
+    position: relative;
+    left: -30px;
+    top: -20px;
+
   }
 }
 
@@ -235,17 +254,24 @@
     flex-direction: column;
     gap: 10px;
   }
+.nav-links h1 {
+    font-size: 10px;
+  }
+
+
   .carro {
     width: 100%;
-    justify-content: center;
+    align-items: center;
     position: relative;
+    bottom: 10px;
+    left : -30px;
   }
 
   .nav-links h1 {
-    font-size: 14px;
+    font-size: 15px;
   }
   .logo img {
-    width: 40px;
+    width: 50px;
   }
 }
 

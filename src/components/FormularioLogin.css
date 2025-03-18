@@ -38,35 +38,7 @@
   background-color: #f8f8f8;
 }
 
-//Hacemos la pagina responsive
-@media (max-width: 1024px) { 
 
-  .formulario-container {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    padding: 0, auto;
-    margin: 0, auto;
-    border-radius: 5px;
-    width: 100px;
-    right: 100;
-    padding: 10px;
- 
-}
-
-
-.login-title {
-  color: green;
-
-
-
-}
-
-
-}
 .botones-container{
 
   display: flex;
@@ -117,21 +89,282 @@
 }
 
 
-@media (max-width: 600px){
-  .formulario-container {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    color: white;
-    padding: 0, auto;
-    margin: 0, auto;
-    border-radius: 5px;
-    width: 100px;
-    padding: 10px;
-  }
+/* 🖥️🔹 Monitores grandes y 4K */
+@media (min-width: 1920px) {
+ }
+
+/* 💻🔹 Laptops y pantallas Full HD */
+@media (max-width: 1920px) and (min-width: 1367px) {
+   
+}
+
+/* 🖥️🔹 Laptops pequeñas y tablets grandes */
+@media (max-width: 1366px) and (min-width: 1025px) {
+   
+}
+
+/* 📟🔹 Tablets medianas */
+@media (max-width: 1024px) and (min-width: 769px) {
+    
+  .formulario-login{
+  
+  width: 220px;
+  height: 120px;
+  top: 28px;
+  right: 30px;
+  padding: 10px 15px;
+  font-size: 12px;
+    }
+
+.entrar{
+
+  width: 70%;
+  padding: 8px;
+  margin: 0 auto;
+  position: relative;
+  right: 15px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.entrar:hover {
+  color: black;
+  background-color: darkgreen;
+}
+
+
+
+
+.salir {
+ 
+  width: 10%;
+  position: relative;
+  right: 15px;
+  padding: 8px;
+  border-radius: 5px;
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+
+ }
+
+.salir:hover {
+  background-color: darkred;
+  color: black;
+}
+
+.message{
+  color: green bold;
+}
+
+  
+  
+}
+
+/* 📱🔹 Móviles grandes */
+@media (max-width: 768px) and (min-width: 601px) {
+
+.formulario-login{
+ background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+  border-radius: 25px;
+  width: 280px;
+  height: 140px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  top: -10px;
+  right: 15px;
+  padding: 20px 20px;
+  font-size: 12px;
+}
+
+.input {
+  position: relative;
+  top: 20px;
+ font-size: 12px;
+  width: 90%;
+  padding: 10px 15px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+}
+
+
+.entrar{
+  position: relative;
+  left: 20px;
+  top: 20px;
+  width: 60%;
+  padding: 8px;
+  justify-content: center;
+  margin: 0 auto;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.salir {
+ 
+  width: 10%;
+  font-size: 12px;
+  padding: 8px;
+  border-radius: 120px;
+  position: relative;
+  top: -115px;
+  left: 20px;
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+
+ }
 
 }
+
+/* 📱🔹 Móviles pequeños */
+@media (max-width: 600px) {
+
+
+.formulario-login{
+ background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+  border-radius: 25px;
+  width: 280px;
+  height: 140px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  top: -10px;
+  right: 15px;
+  padding: 20px 20px;
+  font-size: 12px;
+}
+
+.input {
+  position: relative;
+  top: 20px;
+ font-size: 12px;
+  width: 90%;
+  padding: 10px 15px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+}
+
+
+.entrar{
+  position: relative;
+  left: 20px;
+  top: 20px;
+  width: 60%;
+  padding: 8px;
+  justify-content: center;
+  margin: 0 auto;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.salir {
+ 
+  width: 10%;
+  font-size: 12px;
+  padding: 8px;
+  border-radius: 120px;
+  position: relative;
+  top: -115px;
+  left: 20px;
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+
+ }
+
+
+
+
+}
+
+/* 📱🔹 Móviles ultra pequeños (Ej: iPhone SE, 320px) */
+@media (max-width: 400px) {
+ 
+
+.formulario-login{
+ background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+  border-radius: 25px;
+  width: 280px;
+  height: 140px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  top: -10px;
+  right: 15px;
+  padding: 20px 20px;
+  font-size: 12px;
+}
+
+.input {
+  position: relative;
+  top: 20px;
+ font-size: 12px;
+  width: 90%;
+  padding: 10px 15px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+}
+
+
+.entrar{
+  position: relative;
+  left: 20px;
+  top: 20px;
+  width: 60%;
+  padding: 8px;
+  justify-content: center;
+  margin: 0 auto;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.salir {
+ 
+  width: 10%;
+  font-size: 12px;
+  padding: 8px;
+  border-radius: 120px;
+  position: relative;
+  top: -115px;
+  left: 20px;
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+
+ }
+}
+
+
 

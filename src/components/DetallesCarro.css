@@ -1,0 +1,265 @@
+
+  .detallesCarro {
+    background-color:  #fff;
+    color:  #fff;
+    padding:  5px 10px;
+    position:  absolute;
+    margin-top: 20px;
+    box-shadow:  1px 5px 5px rgb(0,0,0,0.6);
+    border-radius:  15px;
+    width:  300px;
+    right: 10px;
+    border:  1px solid rgba(255, 255, 255, 0.2);
+    max-height:  300px;
+    overflow-Y:  auto;
+  }
+
+  .lista-productos {
+    margin: 0;
+    padding: 0;
+    border:  1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .propiedades {
+
+    color:  black;
+    border:  1px solid rgba(0, 128, 0, 0.2);
+    border-radius:  5px;
+    list-style-type:  none;
+    display:  flex;
+    justify-content:  space-between;
+    align-items:  center;
+    padding:  10px 15px;
+  }
+
+  .total {
+    color:  green;
+    font-weight:  bold;
+    border:  1px solid rgba(0, 128, 0, 0.2);
+    font-size:  1.1rem;
+    margin-top: 10px;
+    display:  flex;
+    padding:  10px 15px;
+    align-items:  center;
+    flex-direction:  column;
+  }
+ .borrar {
+    width:  15px;
+    padding:  0;
+    margin:  0;
+    background-color:  green;
+    color:  white;
+    
+  }
+
+
+/* 🖥️🔹 Monitores grandes y 4K */
+@media (min-width: 1920px) {
+ }
+
+/* 💻🔹 Laptops y pantallas Full HD */
+@media (max-width: 1920px) and (min-width: 1367px) {
+   
+}
+
+/* 🖥️🔹 Laptops pequeñas y tablets grandes */
+@media (max-width: 1366px) and (min-width: 1025px) {
+   
+}
+
+/* 📟🔹 Tablets medianas */
+@media (max-width: 1024px) and (min-width: 769px) {
+    
+  
+  
+  
+}
+
+/* 📱🔹 Móviles grandes */
+@media (max-width: 768px) and (min-width: 601px) {
+ .detallesCarro {
+    background-color:  rgba(0,0,0,0.4);
+    color:  #fff;
+    padding:  5px 10px;
+    position:  relative;
+    bottom: 20px;
+    box-shadow:  1px 5px 5px rgb(0,0,0,0.6);
+    border-radius:  15px;
+    width:  100%;
+    right: -20px;
+    border:  1px solid rgba(255, 255, 255, 0.2);
+    max-height:  250px;
+    overflow-Y:  auto;
+  }
+
+  .lista-productos {
+    margin: 0;
+    padding: 0;
+    border:  1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .img-procuto{
+    width: 40px;
+    height: 20px;
+  }
+
+  .propiedades {
+
+    color:  white;
+    font-size: 12px;
+    border:  1px solid rgba(0, 128, 0, 0.2);
+    border-radius:  5px;
+    list-style-type:  none;
+    display:  flex;
+    justify-content:  space-between;
+    align-items:  center;
+    padding:  10px 15px;
+  }
+
+  .total {
+    color:  green;
+    font-weight:  bold;
+    border:  1px solid rgba(0, 128, 0, 0.2);
+    font-size:  0.9rem;
+    margin-top: 10px;
+    display:  flex;
+    padding:  10px 15px;
+    align-items:  center;
+    flex-direction:  column;
+  }
+ .borrar {
+    width:  15px;
+    padding:  0;
+    margin:  0;
+    background-color:  green;
+    color:  white;
+    
+  }    
+
+}
+
+/* 📱🔹 Móviles pequeños */
+@media (max-width: 600px) {
+   .detallesCarro {
+    background-color:  rgba(0,0,0,0.4);
+    color:  #fff;
+    padding:  5px 10px;
+    position:  relative;
+    bottom: 20px;
+    box-shadow:  1px 5px 5px rgb(0,0,0,0.6);
+    border-radius:  15px;
+    width:  100%;
+    right: -20px;
+    border:  1px solid rgba(255, 255, 255, 0.2);
+    max-height:  180px;
+    overflow-Y:  auto;
+  }
+
+  .lista-productos {
+    margin: 0;
+    padding: 0;
+    border:  1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .img-procuto{
+    width: 40px;
+    height: 20px;
+  }
+
+  .propiedades {
+
+    color:  white;
+    font-size: 12px;
+    border:  1px solid rgba(0, 128, 0, 0.2);
+    border-radius:  5px;
+    list-style-type:  none;
+    display:  flex;
+    justify-content:  space-between;
+    align-items:  center;
+    padding:  10px 15px;
+  }
+
+  .total {
+    color:  green;
+    font-weight:  bold;
+    border:  1px solid rgba(0, 128, 0, 0.2);
+    font-size:  0.9rem;
+    margin-top: 10px;
+    display:  flex;
+    padding:  10px 15px;
+    align-items:  center;
+    flex-direction:  column;
+  }
+ .borrar {
+    width:  15px;
+    padding:  0;
+    margin:  0;
+    background-color:  green;
+    color:  white;
+    
+  }    
+
+}
+
+/* 📱🔹 Móviles ultra pequeños (Ej: iPhone SE, 320px) */
+@media (max-width: 400px) {
+   .detallesCarro {
+    background-color:  rgba(0,0,0,0.4);
+    color:  #fff;
+    padding:  5px 10px;
+    position:  relative;
+    bottom: 20px;
+    box-shadow:  1px 5px 5px rgb(0,0,0,0.6);
+    border-radius:  15px;
+    width:  100%;
+    right: -10px;
+    border:  1px solid rgba(255, 255, 255, 0.2);
+    max-height:  200px;
+    overflow-Y:  auto;
+  }
+
+  .lista-productos {
+    margin: 0;
+    padding: 0;
+    border:  1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .img-procucto{
+    width: 40px;
+    height: 20px;
+  }
+
+  .propiedades {
+
+    color:  white;
+    font-size: 12px;
+    border:  1px solid rgba(0, 128, 0, 0.2);
+    border-radius:  5px;
+    list-style-type:  none;
+    display:  flex;
+    justify-content:  space-between;
+    align-items:  center;
+    padding:  10px 15px;
+  }
+
+  .total {
+    color:  green;
+    font-weight:  bold;
+    border:  1px solid rgba(0, 128, 0, 0.2);
+    font-size:  0.9rem;
+    margin-top: 10px;
+    display:  flex;
+    padding:  10px 15px;
+    align-items:  center;
+    flex-direction:  column;
+  }
+ .borrar {
+    width:  15px;
+    padding:  0;
+    margin:  0;
+    background-color:  green;
+    color:  white;
+    
+  }    
+}
+

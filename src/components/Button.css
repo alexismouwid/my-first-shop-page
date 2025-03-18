@@ -1,0 +1,125 @@
+
+/* 🖥️🔹 Monitores grandes y 4K */
+@media (min-width: 1920px) {
+ .button-agregar{
+   background-color: #0A7E8C;
+    color:#fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: "center";
+    text-decoration: none;
+    display: inline-block;
+   cursor: pointer;
+    font-size: 15px;
+  }
+
+ }
+
+/* 💻🔹 Laptops y pantallas Full HD */
+@media (max-width: 1920px) and (min-width: 1367px) {
+    .button-agregar{
+   background-color: #0A7E8C;
+    color:#fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: "center";
+    text-decoration: none;
+    display: inline-block;
+   cursor: pointer;
+    font-size: 15px;
+  }
+
+}
+
+/* 🖥️🔹 Laptops pequeñas y tablets grandes */
+@media (max-width: 1366px) and (min-width: 1025px) {
+    .button-agregar{
+   background-color: #0A7E8C;
+    color:#fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: "center";
+    text-decoration: none;
+    display: inline-block;
+   cursor: pointer;
+    font-size: 15px;
+  }
+
+}
+
+/* 📟🔹 Tablets medianas */
+@media (max-width: 1024px) and (min-width: 769px) {
+    
+   .button-agregar{
+   background-color: #0A7E8C;
+    color:#fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: "center";
+    text-decoration: none;
+    display: inline-block;
+   cursor: pointer;
+    font-size: 17px;
+  }
+
+  
+  
+}
+
+/* 📱🔹 Móviles grandes */
+@media (max-width: 768px) and (min-width: 601px) {
+ 
+  .button-agregar{
+   background-color: #0A7E8C;
+    color:#fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: "center";
+    text-decoration: none;
+    display: inline-block;
+   cursor: pointer;
+    font-size: 10px;
+  }
+
+}
+
+/* 📱🔹 Móviles pequeños */
+@media (max-width: 600px) {
+   
+  .button-agregar{
+   background-color: #0A7E8C;
+    color:#fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: "center";
+    text-decoration: none;
+    display: inline-block;
+cursor: pointer;
+    font-size: 10px;
+  }
+
+}
+
+/* 📱🔹 Móviles ultra pequeños (Ej: iPhone SE, 320px) */
+@media (max-width: 400px) {
+ 
+  .button-agregar{
+   background-color: #0A7E8C;
+    color:#fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: "center";
+    text-decoration: none;
+    display: inline-block;
+cursor: pointer;
+    font-size: 10px;
+  }
+}
+

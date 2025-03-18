@@ -6,6 +6,7 @@ import FormularioLogin from "./FormularioLogin";
 import FormularioRegistro from "./FormularioRegistro";
 
 class Navbar extends Component {
+
   state = {
     mostrarFormulario: false,
     mostrarRegistro: false,
@@ -27,6 +28,7 @@ class Navbar extends Component {
 
   render() {
     const {
+      carroRef,
       carro,
       esCarroVisible,
       mostrarCarro,
@@ -42,7 +44,7 @@ class Navbar extends Component {
          
 
           <ul className="nav-links">
-            <li> 
+            <li > 
             <Logo />
           </li>
             <li><h1>HAZ TU PEDIDO</h1></li>
@@ -55,7 +57,7 @@ class Navbar extends Component {
                   </button>
                 </li>
                 <li className="carro">
-                  <Carro carro={carro} esCarroVisible={esCarroVisible} mostrarCarro={mostrarCarro} />
+                  <Carro  carro={carro} esCarroVisible={esCarroVisible} mostrarCarro={mostrarCarro} />
                 </li>
               </>
             ) : (

@@ -10,18 +10,18 @@
 }
 
 
-.productos{
+.frutas{
 
      width: 90%;
      display: grid;
         grid-template-columns: repeat(3, 1fr);
         margin: 50px auto;
         max-width: 1920px; /* Ajusta para móviles */
-        gap: 50px; /* Menos espacio entre productos */
+        gap: 50px; /* Menos espacio entre frutas */
 }
 /* 🖥️🔹 Monitores grandes y 4K */
 @media (min-width: 1920px) {
- .productos {
+ .frutas {
 
         
      right: 180px;
@@ -31,7 +31,7 @@
         grid-template-columns: repeat(4, 1fr);
         margin: 50px auto;
         max-width: 1920px; /* Ajusta para móviles */
-        gap: 50px; /* Menos espacio entre productos */
+        gap: 50px; /* Menos espacio entre frutas */
     }
 
 
@@ -40,7 +40,7 @@
 
 /* 💻🔹 Laptops y pantallas Full HD */
 @media (max-width: 1920px) and (min-width: 1367px) {
-.productos {
+.frutas {
 
         
      width: 100%;
@@ -49,7 +49,7 @@
         grid-template-columns: repeat(4, 1fr);
         margin: 50px auto;
         max-width: 1920px; /* Ajusta para móviles */
-        gap: 10px; /* Menos espacio entre productos */
+        gap: 10px; /* Menos espacio entre frutas */
     }
 
 
@@ -58,7 +58,7 @@
 
 /* 🖥️🔹 Laptops pequeñas y tablets grandes */
 @media (max-width: 1366px) and (min-width: 1025px) {
-.productos {
+.frutas {
 
         
      position: relative;
@@ -67,7 +67,7 @@
         grid-template-columns: repeat(4, 1fr);
         margin: 50px auto;
         max-width: 1200px; /* Ajusta para móviles */
-        gap: 10px; /* Menos espacio entre productos */
+        gap: 10px; /* Menos espacio entre frutas */
     }
 
 
@@ -76,7 +76,7 @@
 
 /* 📟🔹 Tablets medianas */
 @media (max-width: 1024px) and (min-width: 769px) {
-    .productos {
+    .frutas {
         display: grid;
        
         grid-template-columns: repeat(3, 1fr);
@@ -92,7 +92,7 @@
 
 /* 📱🔹 Móviles grandes */
 @media (max-width: 768px) and (min-width: 601px) {
-  .productos {
+  .frutas {
         grid-template-columns: repeat(2, 1fr);
         max-width: 660px;
         gap: 10px;
@@ -101,7 +101,7 @@
 } 
 /* 📱🔹 Móviles pequeños */
 @media (max-width: 600px) {
-  .productos {
+  .frutas {
         grid-template-columns: repeat(2, 1fr);
         justify-content: center;
         align-items: center;
@@ -117,7 +117,7 @@ gap: 20px;
 
 /* 📱🔹 Móviles ultra pequeños (Ej: iPhone SE, 320px) */
 @media (max-width: 400px) {
-.productos {
+.frutas {
         grid-template-columns: repeat(2, 1fr);
         justify-content: center;
         align-items: center;

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Button from "./Button";
 
-const Producto = ({ producto, agregarAlCarro }) => {
+const Fruta = ({ fruta, agregarAlCarro }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 600);
 
   useEffect(() => {
@@ -21,7 +21,7 @@ const Producto = ({ producto, agregarAlCarro }) => {
   }, []);
 
   const styles = {
-    producto: {
+    fruta: {
       backgroundColor: "#fff",
       padding: isMobile ? "5px" : "10px",
       margin: isMobile ? "5px" : "10px",
@@ -35,21 +35,24 @@ const Producto = ({ producto, agregarAlCarro }) => {
     },
     titulo: {
       fontSize: isMobile ? "12px" : "16px",
+      color: '#000000'
     },
     precio: {
+      color: '#000000',
       fontSize: isMobile ? "10px" : "14px",
     },
   };
 
   return (
-    <div style={styles.producto}>
-      <img style={styles.img} src={producto.img} alt={producto.name} />
-      <h3 style={styles.titulo}>{producto.name}</h3>
-      <p style={styles.precio}>{producto.price}</p>
-      <Button onClick={() => agregarAlCarro(producto)}>Agregar al carro</Button>
+    <div style={styles.fruta}>
+      <img style={styles.img} src={fruta.img} alt={fruta.name} />
+      <h3 style={styles.titulo}>{fruta.name}</h3>
+      <p style={styles.precio}>{fruta.price}</p>
+      <Button onClick={() => agregarAlCarro(fruta)}>Agregar al carro</Button>
     </div>
   );
 };
 
-export default Producto;
+export default Fruta;
+
 

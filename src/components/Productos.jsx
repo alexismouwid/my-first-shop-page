@@ -1,6 +1,5 @@
 import { Component, createRef } from "react";
 import Producto from "./Producto.jsx";
-import ScrollReveal from "scrollreveal";
 import "./Productos.css";
 
 const styles = {};

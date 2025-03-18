@@ -1,5 +1,5 @@
 import { Component } from "react";
-
+import './Button.css';
 const styles = {
   button: {
     backgroundColor: "#0A7E8C",
@@ -17,7 +17,7 @@ const styles = {
 };
 class Button extends Component {
   render() {
-    return <button style={styles.button} {...this.props} />;
+    return <button className='button-agregar'  {...this.props} />;
   }
 }
 

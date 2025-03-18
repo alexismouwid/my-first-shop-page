@@ -1,5 +1,6 @@
 import { Component, createRef } from "react";
 import Productos from "./components/Productos";
+import Frutas from './components/Frutas'
 import Layout from "./components/Layout";
 import Title from "./components/Title";
 import Navbar from "./components/Navbar";
@@ -11,6 +12,10 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.productosRef = createRef(); // 🔹 Creamos una referencia a la sección de productos
+    this.carroRef = createRef();
+    this.vegetalesRef = createRef();
+    this.frutasRef = createRef();
+    
   }
 
   state = {
@@ -28,12 +33,56 @@ class App extends Component {
       { name: "Pimiento", price: 1600, img: "/productos/pimiento.png" },
       { name: "Repollo", price: 1750, img: "/productos/repollo.png" },
     ],
-
+   
+frutas: [
+      { name: "Fresa", price: 900, img: "/frutas/fresa.jpg" },
+      { name: "Naranja", price: 800, img: "/frutas/naranja.jpg" },
+      { name: "Uvas", price: 1000, img: "/frutas/uvas.jpg" },
+      { name: "Manzana", price: 1500, img: "/frutas/manzana.jpg" },
+      { name: "Durazno", price: 2100, img: "/frutas/durazno.jpg" },
+      { name: "Papaya", price: 1350, img: "/frutas/papaya.jpg" },
+      { name: "Coco", price: 1700, img: "/frutas/coco.jpg" },
+      { name: "Pera", price: 1900, img: "/frutas/pera.jpg" },
+      { name: "Limón", price: 2250, img: "/frutas/limon.jpg" },
+      { name: "Guayaba", price: 2500, img: "/frutas/guayaba.jpg" },
+      { name: "Maracuya", price: 1600, img: "/frutas/maracuya.jpg" },
+      { name: "Sandia", price: 1750, img: "/frutas/sandia.jpg" },
+    ],
     carro: [],
     esCarroVisible: false,
     usuario: JSON.parse(localStorage.getItem("usuario")) || null,
     usuarioAutenticado: !!localStorage.getItem("token"),
+    mostrarVegetales: false,
+    mostrarFrutas: false,
   };
+
+    toggleVegetales = () => {
+  this.setState((prevState) => {
+    const nuevoEstado = !prevState.mostrarVegetales;
+    return {
+      mostrarVegetales: nuevoEstado,
+      mostrarFrutas: false,
+    };
+  }, () => {
+    if (this.vegetalesRef.current && this.state.mostrarVegetales) {
+      this.vegetalesRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  });
+};
+
+  toggleFrutas = () => {
+    this.setState((prevState) => {
+      const nuevoEstado = !prevState.mostrarFrutas;
+      return {
+        mostrarFrutas: nuevoEstado,
+        mostrarVegetales: false,
+      };
+    }, () => {
+      if (this.frutasRef.current && this.state.mostrarFrutas) {
+        this.frutasRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+   };
 
 
 
@@ -67,6 +116,15 @@ class App extends Component {
     }
   };
 
+  scrollToCar = () => {
+    if(this.carroRef.current) {
+      this.carroRef.current.scrollIntoView({ benavier: "smooth" })
+this.setState({ esCarroVisible: true});
+    }
+  }
+ 
+
+
   cerrarSesion = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("usuario");
@@ -85,7 +143,7 @@ this.verificarSesion();
   }
 
   render() {
-    const { carro, esCarroVisible, usuario , usuarioAutenticado} = this.state;
+    const { carro, esCarroVisible, usuario , usuarioAutenticado, mostrarVegetales, mostrarFrutas} = this.state;
     const nombre = JSON.parse(localStorage.getItem("usuario")) || {
       nombre: "Invitado",
     };
@@ -93,8 +151,9 @@ this.verificarSesion();
 
     return (
       <div className="App">
-        <div className="content-1">
+        <div ref={this.carroRef} className="content-1">
           <Navbar
+           
             carro={this.state.carro}
             esCarroVisible={esCarroVisible}
             mostrarCarro={this.mostrarCarro}
@@ -109,15 +168,51 @@ this.verificarSesion();
         </div>
 
         {/* 🔹 Referencia a la sección de productos */}
-        <div ref={this.productosRef}>
+        <div className='layout-btns'> 
+
+          <div ref={this.productosRef} className='content-btns'> 
+
+
+          <h1 className='titulo-productos'> ¿Que productos desea ver? </h1>
+<button className='btn-vegetales' onClick={this.toggleVegetales}> Vegetales </button> 
+<button className='btn-frutas' onClick={this.toggleFrutas}> Frutas </button> 
+          </div>
+
+
+
+
+          </div>
+               
+
+        {mostrarVegetales && (
+ <div ref={this.vegetalesRef}>
           <Layout>
             <Productos
               agregarAlCarro={this.agregarAlCarro}
               productos={this.state.productos}
             />
+            <button className='ir-carro' onClick={this.scrollToCar}> Ir al pagar </button>
           </Layout>
         </div>
-        <Footer />
+
+          
+        )}
+        {mostrarFrutas && (
+<div  ref={this.frutasRef}>
+          <Layout>
+            <Frutas
+              agregarAlCarro={this.agregarAlCarro}
+              frutas={this.state.frutas}
+            />
+  <button className='ir-carro' onClick={this.scrollToCar}> Ir al pagar </button>
+
+          </Layout>
+        </div>
+
+
+
+        )}
+               <Footer />
       </div>
     );
   }
