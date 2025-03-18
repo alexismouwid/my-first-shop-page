@@ -52,12 +52,6 @@
   .titulo:hover{
     font-size: 95px;
   }
-.hola{
-  position: relative;
-  top: 300px;
-  font-size: 20px;
-}
-
 /* 📟🔹 Tablets medianas */
 @media (max-width: 1024px) and (min-width: 769px) {
     
