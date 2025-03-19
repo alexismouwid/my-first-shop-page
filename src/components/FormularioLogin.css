@@ -68,6 +68,8 @@ font-size: clamp(14px, 2vw, 18px); /* Tamaño de fuente adaptable */
 }
 
 
+
+
 /* 📱🔹 Modo Movil */
 @media (max-width: 768px)  {
 
@@ -78,6 +80,7 @@ font-size: clamp(14px, 2vw, 18px); /* Tamaño de fuente adaptable */
 
 
 }
+
 
 
 

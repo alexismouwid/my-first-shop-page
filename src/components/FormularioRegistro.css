@@ -14,8 +14,8 @@
 .formulario-register{
 
 
-width: clamp(250px, 50vw, 240px); /* Ancho flexible */
-height: 175px;
+width: clamp(250px, 50vw, 250px); /* Ancho flexible */
+height: 220px;
 padding: clamp(16px, 3vw, 32px); /* Espaciado adaptable */
 border-radius: clamp(8px, 2vw, 16px); /* Bordes redondeados */
 box-shadow: 0 0 10px 5px rgba(0, 255, 0, 0.5); /* Sombra verde difuminada */
@@ -68,9 +68,16 @@ font-size: clamp(14px, 2vw, 18px); /* Tamaño de fuente adaptable */
   margin-top: 10px;
 }
 
-/* 📱🔹 Móviles  */
+
+/* 📱🔹 Modo Movil */
 @media (max-width: 768px)  {
+
 .formulario-register{
- position: relative;
+  position: relative;
+  
   }
+
+
+}
+
 
