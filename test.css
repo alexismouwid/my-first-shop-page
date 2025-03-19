@@ -1,3 +1,4 @@
+
 .formulario-container {
   color: white;
   border-radius: 5px;
@@ -12,7 +13,7 @@
 .formulario-login{
 
 width: clamp(240px, 50vw, 240px); /* Ancho flexible */
-height: 125px;
+height: 120px;
 padding: clamp(16px, 3vw, 32px); /* Espaciado adaptable */
 border-radius: clamp(8px, 2vw, 16px); /* Bordes redondeados */
 box-shadow: 0 0 10px 5px rgba(0, 255, 0, 0.5); /* Sombra verde difuminada */
@@ -45,6 +46,7 @@ border-radius: clamp(5px, 1vw, 10px);
 .entrar, .salir{
 
   position: relative;
+  bottom: 10px;
 font-size: clamp(14px, 2vw, 18px); /* Tamaño de fuente adaptable */
   padding: clamp(8px, 1vw, 16px) clamp(12px, 2vw, 24px); /* Espaciado adaptable */
   width: clamp(80px, 20vw, 100px); /* Ancho dinámico */
@@ -62,16 +64,16 @@ font-size: clamp(14px, 2vw, 18px); /* Tamaño de fuente adaptable */
   background-color: darkgreen;
 }
 .message{
-  color: red;
   position: relative;
  bottom: 10px;
+  color: green bold;
 }
 
 
 /* 📱🔹 Modo Movil */
 @media (max-width: 768px)  {
 
-.formulario-login{
+.formulario-register{
   position: relative;
   
   }

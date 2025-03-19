@@ -52,8 +52,8 @@ html{
     margin: 0;
     padding: 0;
     color: #fff;
-    font-size: 90px;
-    position: relative;
+     font-size: clamp(16px, 10vw, 80px); 
+  position: relative;
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -63,7 +63,6 @@ html{
   }
   .titulo:hover{
     color: green;
-    font-size: 95px;
     position: relative;
     top: 45%;
     left: 50%;
@@ -73,298 +72,20 @@ html{
 
 
 
-
-/* 🖥️🔹 Monitores grandes y 4K */
-@media (min-width: 1920px) {
-  .titulo{
-
-  font-size: 180px;
-  }
-  .titulo:hover{
-    font-size: 185px;
-  }
-.layout-btns{
-  background-image: url("/vegetales.png");
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
- border: 1px solid rgba(255, 255, 255, 0.2);
-  overflow: visible;
-  transition: all 0.3s ease-in-out;
-  backdrop-filter: blur(5px);
-  background-color: rgba(0, 0, 0, 0.2);
-  animation: slideDown 1s ease-in-out;
-
-  }
-
-  .content-btns{
-     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  overflow: visible;
-  transition: all 0.3s ease-in-out;
-  backdrop-filter: blur(5px);
-  background-color: rgba(0, 0, 0, 0.2);
-  animation: slideDown 1s ease-in-out;
-width: 100%;
-height:  100%;
-padding: 10px 15px;
-align-items: center;
-
-  }
-  .titulo-productos{
-    font-size: 30px;
-    color: white;
-    box-shadow: 5px solid rgba(0,0,0,0.1);
-    
-  }
-  .btn-frutas{
-    width: 40%;
-    position: relative;
-    padding: 10px 15px;
-    background-color: green;
-    border:none;
-    color: white
-    
-   }
-  
-  .btn-frutas:hover{
-background-color:  white;
-    color: black;
-
-
-
-      }
- .btn-vegetales{
-    width: 40%;
-    padding: 10px 15px;
-    background-color: green;
-    border:none;
-color: white;
-  }
-  .btn-vegetales:hover{
-background-color:  white;
-    color: black;
-
-  }
-
-.ir-carro {
-    width: 100px;
-    padding: 10px 15px;
-    background-color: green;
-    border:none;
-    color: white
-  }
-  .ir-carro:hover{
-    background-color:  white;
-    color: black; 
+.btn-productos{
+  position: relative;
+  top: 55px;
+ font-size: clamp(14px, 2vw, 24px); /* Tamaño de fuente adaptable */
+  padding: clamp(8px, 1vw, 16px) clamp(12px, 2vw, 24px); /* Espaciado adaptable */
+  width: clamp(100px, 20vw, 300px); /* Ancho dinámico */
+  height: clamp(40px, 5vw, 80px); /* Alto dinámico */
+  border-radius: clamp(5px, 1vw, 15px); /* Bordes redondeados responsivos */
+  background-color: green;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
 
-}
-
-/* 💻🔹 Laptops y pantallas Full HD */
-@media (max-width: 1920px) and (min-width: 1367px) {
-  .titulo{
-    font-size: 120px;
-  }
-  .titulo:hover{
-    font-size: 125px;
-  }
-  .layout-btns{
-  background-image: url("/fv.jpg");
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
- border: 1px solid rgba(255, 255, 255, 0.2);
-  overflow: visible;
-  transition: all 0.3s ease-in-out;
-  backdrop-filter: blur(5px);
-  background-color: rgba(0, 0, 0, 0.2);
-  animation: slideDown 1s ease-in-out;
-
-  }
-
-  .content-btns{
-     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  overflow: visible;
-  transition: all 0.3s ease-in-out;
-  backdrop-filter: blur(2px);
-  background-color: rgba(0, 0, 0, 0.2);
-  animation: slideDown 1s ease-in-out;
-width: 100%;
-height:  100%;
-padding: 10px 15px;
-align-items: center;
-
-  }
-  .titulo-productos{
-    font-size: 30px;
-    color: white;
-    box-shadow: 5px solid rgba(0,0,0,0.1);
-    
-  }
-  .btn-frutas{
-    width: 40%;
-    position: relative;
-    padding: 10px 15px;
-    background-color: green;
-    border:none;
-    color: white
-    
-   }
-  
-  .btn-frutas:hover{
-background-color:  white;
-    color: black;
-
-
-
-      }
- .btn-vegetales{
-    width: 40%;
-    padding: 10px 15px;
-    background-color: green;
-    border:none;
-color: white;
-  }
-  .btn-vegetales:hover{
-background-color:  white;
-    color: black;
-
-  }
-.ir-carro {
-    width: 100px;
-    padding: 10px 15px;
-    background-color: green;
-    border:none;
-    color: white
-  }
-  .ir-carro:hover{
-    background-color:  white;
-    color: black; 
-}
-
-
-}
-
-/* 🖥️🔹 Laptops pequeñas y tablets grandes */
-@media (max-width: 1366px) and (min-width: 1025px) {
-    .titulo{
-    font-size: 90px;
-   
-  }
-  .titulo:hover{
-    font-size: 90px;
-  }
-.layout-btns{
-  background-image: url("/fv.jpg");
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
- border: 1px solid rgba(255, 255, 255, 0.2);
-  overflow: visible;
-  transition: all 0.3s ease-in-out;
-  backdrop-filter: blur(5px);
-  background-color: rgba(0, 0, 0, 0.2);
-  animation: slideDown 1s ease-in-out;
-
-  }
-
-  .content-btns{
-     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  overflow: visible;
-  transition: all 0.3s ease-in-out;
-  backdrop-filter: blur(2px);
-  background-color: rgba(0, 0, 0, 0.2);
-  animation: slideDown 1s ease-in-out;
-width: 100%;
-height:  100%;
-padding: 10px 15px;
-align-items: center;
-
-  }
-  .titulo-productos{
-    font-size: 60px;
-    color: white;
-    box-shadow: 5px solid rgba(0,0,0,0.1);
-    
-  }
-  .btn-frutas{
-    width: 40%;
-    font-size: 25px;
-    position: relative;
-    padding: 35px 55px;
-    background-color: green;
-    border:none;
-    color: white
-    
-   }
-  
-  .btn-frutas:hover{
-background-color:  white;
-    color: black;
-
-
-
-      }
- .btn-vegetales{
-    width: 40%;
-    font-size: 25px;
-    padding: 35px 55px;
-    background-color: green;
-    border:none;
-color: white;
-  }
-  .btn-vegetales:hover{
-background-color:  white;
-    color: black;
-
-  }
-.ir-carro {
-    width: 100px;
-    padding: 10px 15px;
-    background-color: green;
-    border:none;
-    color: white
-  }
-  .ir-carro:hover{
-    background-color:  white;
-    color: black; 
-}
-
-
-}
-
-/* 📟🔹 Tablets medianas */
-@media (max-width: 1024px) and (min-width: 769px) {
-  .titulo{
-    position: relative;
-    top: 20rem;
-    font-size: 100px;
-  }
-  .titulo:hover{
-    position: relative;
-    top: 20rem;
-    font-size: 100px;
-  }
-  
-  
   .layout-btns{
   background-image: url("/fv.jpg");
     background-size: cover;
@@ -374,366 +95,56 @@ background-color:  white;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
- border: 1px solid rgba(255, 255, 255, 0.2);
   overflow: visible;
   transition: all 0.3s ease-in-out;
-  backdrop-filter: blur(5px);
-  background-color: rgba(0, 0, 0, 0.2);
-  animation: slideDown 1s ease-in-out;
 
   }
-
+/*Seccion 2 configs css start*/
   .content-btns{
      display: flex;
     flex-direction: column;
     justify-content: space-around;
   overflow: visible;
   transition: all 0.3s ease-in-out;
-  backdrop-filter: blur(2px);
-  background-color: rgba(0, 0, 0, 0.2);
-  animation: slideDown 1s ease-in-out;
-width: 100%;
-height:  100%;
-padding: 10px 15px;
-align-items: center;
-
-  }
-  .titulo-productos{
-    font-size: 70px;
-    color: white;
-    box-shadow: 5px solid rgba(0,0,0,0.1);
-    
-  }
-  .btn-frutas{
-    width: 40%;
-    font-size: 25px;
-    position: relative;
-    padding: 30px 45px;
-    background-color: green;
-    border:none;
-    color: white
-    
-   }
-  
-  .btn-frutas:hover{
-background-color:  white;
-    color: black;
-
-
-
-      }
- .btn-vegetales{
-    width: 40%;
-    font-size: 25px;
-    padding: 30px 45px;
-    background-color: green;
-    border:none;
-color: white;
-  }
-  .btn-vegetales:hover{
-background-color:  white;
-    color: black;
-
-  }
-
-.ir-carro {
-    width: 100px;
-    padding: 10px 15px;
-    background-color: green;
-    border:none;
-    color: white
-  }
-  .ir-carro:hover{
-    background-color:  white;
-    color: black; 
-}
-
-  
-}
-
-/* 📱🔹 Móviles grandes */
-@media (max-width: 768px) and (min-width: 601px) {
-  .titulo{
-    font-size: 90px;
-  }
-  .titulo:hover{
-    font-size: 90px;
-  }
-.layout-btns{
-  background-image: url("/fv.jpg");
-    background-size: cover;
-    background-position: left;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
- border: 1px solid rgba(255, 255, 255, 0.2);
-  overflow: visible;
-  transition: all 0.3s ease-in-out;
-  backdrop-filter: blur(5px);
-  background-color: rgba(0, 0, 0, 0.2);
-  animation: slideDown 1s ease-in-out;
-
-  }
-
-  .content-btns{
-     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  overflow: visible;
-  transition: all 0.3s ease-in-out;
-  backdrop-filter: blur(2px);
-  background-color: rgba(0, 0, 0, 0.2);
-  animation: slideDown 1s ease-in-out;
-width: 100%;
-height:  100%;
-padding: 10px 15px;
-align-items: center;
-
-  }
-  .titulo-productos{
-    font-size: 70px;
-    color: white;
-    box-shadow: 5px solid rgba(0,0,0,0.1);
-    
-  }
-  .btn-frutas{
-    width: 40%;
-    font-size: 25px;
-    position: relative;
-    padding: 40px 55px;
-    background-color: green;
-    border:none;
-    color: white
-    
-   }
-  
-  .btn-frutas:hover{
-background-color:  white;
-    color: black;
-
-
-
-      }
- .btn-vegetales{
-    width: 40%;
-    font-size: 25px;
-    padding: 40px 55px;
-    background-color: green;
-    border:none;
-color: white;
-  }
-  .btn-vegetales:hover{
-background-color:  white;
-    color: black;
-
-  }
-.ir-carro {
-    width: 100px;
-    padding: 10px 15px;
-    background-color: green;
-    border:none;
-    color: white
-  }
-  .ir-carro:hover{
-    background-color:  white;
-    color: black; 
-}
-
-
-}
-
-/* 📱🔹 Móviles pequeños */
-@media (max-width: 600px) {
-
-  .titulo{
-    font-size: 60px;
-    position: relative;
-    top: 18rem;
-
-  }
-  .titulo:hover{
-    font-size: 60px;
-  }
-  .layout-btns{
-  background-image: url("/fv.jpg");
-    background-size: cover;
-    background-position: left;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
- border: 1px solid rgba(255, 255, 255, 0.2);
-  overflow: visible;
-  transition: all 0.3s ease-in-out;
-  backdrop-filter: blur(1px);
+  backdrop-filter: blur(0.5px);
   background-color: rgba(0, 0, 0, 0.1);
   animation: slideDown 1s ease-in-out;
-
-  }
-
-  .content-btns{
-     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  overflow: visible;
-  transition: all 0.3s ease-in-out;
-  backdrop-filter: blur(2px);
-  background-color: rgba(0, 0, 0, 0.2);
-  animation: slideDown 1s ease-in-out;
 width: 100%;
 height:  100%;
-padding: 10px 15px;
+padding: 100px 15px;
 align-items: center;
 
   }
   .titulo-productos{
-    font-size: 45px;
+   
+     font-size: clamp(16px, 10vw, 80px); 
     color: white;
-    box-shadow: 5px solid rgba(0,0,0,0.1);
     
   }
-  .btn-frutas{
-    width: 40%;
-    position: relative;
-    top: -40px;
-    padding: 35px 25px;
-    background-color: green;
-    border:none;
-    color: white
-    
+  .btn-frutas, .btn-vegetales, .ir-carro, .btn-productos{
+       font-size: clamp(14px, 2vw, 24px); /* Tamaño de fuente adaptable */
+  padding: clamp(8px, 1vw, 16px) clamp(12px, 2vw, 24px); /* Espaciado adaptable */
+  width: clamp(100px, 20vw, 300px); /* Ancho dinámico */
+  height: clamp(40px, 5vw, 80px); /* Alto dinámico */
+  border-radius: clamp(5px, 1vw, 15px); /* Bordes redondeados responsivos */
+  background-color: green;
+  color: white;
+  border: none;
+  cursor: pointer;
    }
-  
-  .btn-frutas:hover{
-background-color:  white;
-    color: black;
 
-
-
-      }
- .btn-vegetales{
-    width: 40%;
-    padding: 35px 25px;
-    background-color: green;
-    border:none;
-color: white;
-  }
-  .btn-vegetales:hover{
-background-color:  white;
-    color: black;
-
-  }
-.ir-carro {
-    width: 100px;
-    padding: 10px 15px;
-    background-color: green;
-    border:none;
-    color: white
-  }
-  .ir-carro:hover{
+   .btn-frutas, .btn-vegetales, .ir-carro: hover{
     background-color:  white;
-    color: black; 
-}
-
-
-}
-
-/* 📱🔹 Móviles ultra pequeños (Ej: iPhone SE, 320px) */
-@media (max-width: 400px) {
-  
-  .titulo{
-    font-size: 60px;
-  }
-  .titulo:hover{
-    font-size: 60px;
-  }
-
-  .layout-btns{
-  background-image: url("/fv.jpg");
-    background-size: cover;
-    background-position: left;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
- border: 1px solid rgba(255, 255, 255, 0.2);
-  overflow: visible;
-  transition: all 0.3s ease-in-out;
-  backdrop-filter: blur(5px);
-  background-color: rgba(0, 0, 0, 0.2);
-  animation: slideDown 1s ease-in-out;
-
-  }
-
-  .content-btns{
-     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  overflow: visible;
-  transition: all 0.3s ease-in-out;
-  backdrop-filter: blur(2px);
-  background-color: rgba(0, 0, 0, 0.2);
-  animation: slideDown 1s ease-in-out;
-width: 100%;
-height:  100%;
-padding: 10px 15px;
-align-items: center;
-
-  }
-  .titulo-productos{
-    position:relative;
-    top: 50px;
-    left: -15px;
-    font-size: 35px;
-    color: white;
-    box-shadow: 5px solid rgba(0,0,0,0.1);
-    
-  }
-  .btn-frutas{
-    width: 40%;
-    position: relative;
-    padding: 25px 35px;
-    background-color: green;
-    border:none;
-    color: white
-    
-   }
-  
-  .btn-frutas:hover{
-background-color:  white;
     color: black;
-
-
-
-      }
- .btn-vegetales{
-    width: 40%;
-    padding: 25px 35px;
-    background-color: green;
-    border:none;
-color: white;
   }
-  .btn-vegetales:hover{
-background-color:  white;
-    color: black;
 
-  }
-  .ir-carro {
-    width: 100px;
-    padding: 10px 15px;
-    background-color: green;
-    border:none;
-    color: white
-  }
-  .ir-carro:hover{
-    background-color:  white;
-    color: black; 
-}
+  /*End config seccion 2 css*/
 
-} 
+  
+
+  
+
+
 
 
 

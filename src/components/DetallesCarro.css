@@ -33,7 +33,7 @@
   }
 
   .total {
-    color:  green;
+    color:  white;
     font-weight:  bold;
     border:  1px solid rgba(0, 128, 0, 0.2);
     font-size:  1.1rem;
@@ -243,7 +243,7 @@
   }
 
   .total {
-    color:  green;
+    color:  white;
     font-weight:  bold;
     border:  1px solid rgba(0, 128, 0, 0.2);
     font-size:  0.9rem;

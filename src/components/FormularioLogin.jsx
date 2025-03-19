@@ -83,7 +83,7 @@ class FormularioLogin extends Component {
                 Entrar
               </button>
               <button type="button" className="salir" onClick={toggleLogin}>
-                x
+                Salir
               </button>
             </div>
             <p className="message">{this.state.message}</p>

@@ -161,12 +161,16 @@ this.verificarSesion();
             cerrarSesion={this.cerrarSesion}
             verificarSesion={this.verificarSesion}
           />
+
           <h1 className="titulo">
             {usuario ? `Bienvenido, ${usuario.nombre}` : "Productos del campo"}
+            
+            <button onClick={this.scrollToProductos} className="btn-productos">Ver productos  </button>
           </h1>
-         
-                    <VerProductos scrollToProductos={this.scrollToProductos} />
-        </div>
+
+                    </div>
+
+
 
         {/* 🔹 Referencia a la sección de productos */}
         <div className='layout-btns'> 

@@ -1,99 +1,18 @@
 .btn-productos{
-  background-color: #4CAF50;
-  border: none;
+ font-size: clamp(14px, 2vw, 24px); /* Tamaño de fuente adaptable */
+  padding: clamp(8px, 1vw, 16px) clamp(12px, 2vw, 24px); /* Espaciado adaptable */
+  width: clamp(100px, 20vw, 300px); /* Ancho dinámico */
+  height: clamp(40px, 5vw, 80px); /* Alto dinámico */
+  border-radius: clamp(5px, 1vw, 15px); /* Bordes redondeados responsivos */
+  background-color: green;
   color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 20px;
-  margin: 4px 2px;
+  border: none;
   cursor: pointer;
-  position: relative;
-  top: 340px;
-  transition: 0.3s ease-in-out;
-  border-radius: 5px;
 }
 
 .btn-productos:hover{
   background-color: #fff;
   color: #000000;
-}
-
-
-
-
-/* 🖥️🔹 Monitores grandes y 4K */
-@media (min-width: 1920px) {
-  .btn-productos{
-    position: relative;
-    top: 500px;
-    font-size: 50px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  }
- }
-
-/* 💻🔹 Laptops y pantallas Full HD */
-@media (max-width: 1920px) and (min-width: 1367px) {
- .btn-productos{
-    position: relative;
-    top: 360px;
-    font-size: 30px;
-  }
-
-}
-
-/* 🖥️🔹 Laptops pequeñas y tablets grandes */
-@media (max-width: 1366px) and (min-width: 1025px) {
-    .titulo{
-    font-size: 90px;
-  }
-  .titulo:hover{
-    font-size: 95px;
-  }
-/* 📟🔹 Tablets medianas */
-@media (max-width: 1024px) and (min-width: 769px) {
-    
-  .btn-productos{
-    position: relative;
-    top: 300px;
-    font-size: 12px;
-  }
-  
-  
-}
-
-/* 📱🔹 Móviles grandes */
-@media (max-width: 768px) and (min-width: 601px) {
-
-  .btn-productos{
-   position: relative;
-    top: 32rem;
-    left: 0px;
-    font-size: 40px;
-  }
-} 
-/* 📱🔹 Móviles pequeños */
-@media (max-width: 600px) {
-.btn-productos{
-   position: relative;
-    top: 32rem;
-    left: 0px;
-    font-size: 30px;
-  } 
-
-
-}
-
-/* 📱🔹 Móviles ultra pequeños (Ej: iPhone SE, 320px) */
-@media (max-width: 400px) {
-  .btn-productos{
-    position: relative;
-    top: 25rem;
-    left: 0px;
-    font-size: 30px;
-  } 
 }
 
 
