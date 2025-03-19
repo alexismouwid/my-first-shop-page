@@ -1,7 +1,11 @@
 import { Component } from "react";
 import './DetallesCarro.css'
+import { createRef } from "react";
 
 class DetallesCarro extends Component {
+ 
+
+  
   render() {
     const { carro } = this.props;
     console.log(carro);
@@ -23,7 +27,7 @@ class DetallesCarro extends Component {
             </li>
           ))}
         </ul>
-        <span className='total'>
+        <span ref={this.refTotal} className='total'>
           Total: {carro.reduce((acc, el) => acc + el.price, 0)}
         </span>
       </div>

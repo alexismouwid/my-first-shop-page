@@ -12,7 +12,7 @@
 .formulario-login{
 
 width: clamp(240px, 50vw, 240px); /* Ancho flexible */
-height: 125px;
+height: 140px;
 padding: clamp(16px, 3vw, 32px); /* Espaciado adaptable */
 border-radius: clamp(8px, 2vw, 16px); /* Bordes redondeados */
 box-shadow: 0 0 10px 5px rgba(0, 255, 0, 0.5); /* Sombra verde difuminada */
@@ -21,13 +21,14 @@ margin: auto;
 backdrop-filter: blur(5px);
 border:  none;
 position: absolute;
+right: -6em;
 font-size: 12px;
 }
 
 .input {
 
- width: 100%; /* Que ocupen todo el ancho del formulario */
-  font-size: clamp(14px, 1.5vw, 20px); /* Tamaño adaptable */
+ width: 95%; /* Que ocupen todo el ancho del formulario */
+  font-size: clamp(14px, 1.5vw, 12px); /* Tamaño adaptable */
   padding: clamp(8px, 1vw, 16px);
 border-radius: clamp(5px, 1vw, 10px);
   border: 2px solid #ccc;
@@ -44,21 +45,28 @@ border-radius: clamp(5px, 1vw, 10px);
 }
 .entrar, .salir{
 
+box-shadow: 0 0 5px 5px rgba(0, 255, 0, 0.5); /* Sombra verde difuminada */
   position: relative;
-font-size: clamp(14px, 2vw, 18px); /* Tamaño de fuente adaptable */
+font-size: clamp(10px, 2vw, 12px); /* Tamaño de fuente adaptable */
   padding: clamp(8px, 1vw, 16px) clamp(12px, 2vw, 24px); /* Espaciado adaptable */
   width: clamp(80px, 20vw, 100px); /* Ancho dinámico */
   height: clamp(30px, 5vw, 40px); /* Alto dinámico */
   border-radius: clamp(5px, 1vw, 15px); /* Bordes redondeados responsivos */
-  background-color: green;
-  color: white;
+  background-color: white;
+  color: black;
   border: none;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 
-.entrar, .salir :hover {
-  color: black;
+.entrar:hover {
+  color: white;
+  background-color: darkgreen;
+}
+
+.salir:hover {
+  color: white;
   background-color: darkgreen;
 }
 .message{
@@ -75,6 +83,7 @@ font-size: clamp(14px, 2vw, 18px); /* Tamaño de fuente adaptable */
 
 .formulario-login{
   position: relative;
+  right: 0;
   
   }
 

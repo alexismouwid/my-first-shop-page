@@ -15,7 +15,6 @@ class App extends Component {
     this.carroRef = createRef();
     this.vegetalesRef = createRef();
     this.frutasRef = createRef();
-    
   }
 
   state = {
@@ -124,7 +123,6 @@ this.setState({ esCarroVisible: true});
   }
  
 
-
   cerrarSesion = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("usuario");
@@ -165,8 +163,9 @@ this.verificarSesion();
           <h1 className="titulo">
             {usuario ? `Bienvenido, ${usuario.nombre}` : "Productos del campo"}
             
-            <button onClick={this.scrollToProductos} className="btn-productos">Ver productos  </button>
           </h1>
+
+            <button onClick={this.scrollToProductos} className="btn-productos">Ver productos  </button>
 
                     </div>
 

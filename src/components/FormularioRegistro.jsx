@@ -81,7 +81,7 @@ class FormularioRegistro extends Component {
             </button>
 
               <button type="button" className="cerrar" onClick={toggleRegistro}>
-                x
+                Salir
               </button>
 
 
