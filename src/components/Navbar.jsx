@@ -13,7 +13,8 @@ esCarroVisible,
 mostrarCarro,
 usuarioAutenticado,
 cerrarSesion,
-verificarSesion
+verificarSesion,
+  vaciarCarro,
 }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -94,7 +95,7 @@ verificarSesion
                   />
                 </li>
                 <li className='carro'>
-  <Carro carro={carro} esCarroVisible={esCarroVisible} mostrarCarro={mostrarCarro} />
+  <Carro carro={carro} esCarroVisible={esCarroVisible} mostrarCarro={mostrarCarro} vaciarCarro={vaciarCarro}/>
                 </li>
               </>
               
@@ -105,7 +106,7 @@ verificarSesion
 
       {/* Carrito separado */}
       <div className="carro-movil">
-        <Carro carro={carro} esCarroVisible={esCarroVisible} mostrarCarro={mostrarCarro} />
+        <Carro carro={carro} esCarroVisible={esCarroVisible} mostrarCarro={mostrarCarro} vaciarCarro={vaciarCarro} />
       </div>
     </>
   );

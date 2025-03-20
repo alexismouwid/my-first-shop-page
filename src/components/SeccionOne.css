@@ -1,0 +1,31 @@
+6.content-2 {
+  position: relative;
+  width: 100%;
+  height: 500px; /* Ajusta la altura según tus necesidades */
+  overflow: hidden;
+}
+
+.carousel-container {
+  display: flex;
+  width: 300%; /* 3 imágenes, cada una ocupa el 100% del ancho */
+  height: 100%;
+  transition: transform 1s ease-in-out; /* Transición suave */
+}
+
+.carousel-item {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.content-2 h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+  z-index: 2;
+}

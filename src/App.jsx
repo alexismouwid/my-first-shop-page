@@ -55,6 +55,10 @@ frutas: [
     mostrarFrutas: false,
   };
 
+vaciarCarro = () => {
+  this.setState({ carro: [] });
+};
+
     toggleVegetales = () => {
   this.setState((prevState) => {
     const nuevoEstado = !prevState.mostrarVegetales;
@@ -158,6 +162,7 @@ this.verificarSesion();
             usuarioAutenticado={usuarioAutenticado}
             cerrarSesion={this.cerrarSesion}
             verificarSesion={this.verificarSesion}
+            vaciarCarro={this.vaciarCarro}
           />
 
           <h1 className="titulo">

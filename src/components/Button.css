@@ -2,16 +2,18 @@
 /* 🖥️🔹 Monitores grandes y 4K */
 @media (min-width: 1920px) {
  .button-agregar{
-   background-color: #0A7E8C;
-    color:#fff;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
+    position: relative;
+      left: 58px;
+      bottom: 10px;
+    justify-content: left;
+    color:green;
+    border: 2px solid green;
+    padding: 0px 6px;
+    border-radius: 360px;
     text-align: "center";
     text-decoration: none;
-    display: inline-block;
    cursor: pointer;
-    font-size: 15px;
+    font-size: 20px;
   }
 
  }
@@ -19,16 +21,18 @@
 /* 💻🔹 Laptops y pantallas Full HD */
 @media (max-width: 1920px) and (min-width: 1367px) {
     .button-agregar{
-   background-color: #0A7E8C;
-    color:#fff;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
+    position: relative;
+      left: 58px;
+      bottom: 10px;
+    justify-content: left;
+    color:green;
+    border: 2px solid green;
+    padding: 0px 6px;
+    border-radius: 360px;
     text-align: "center";
     text-decoration: none;
-    display: inline-block;
    cursor: pointer;
-    font-size: 15px;
+    font-size: 20px;
   }
 
 }
@@ -36,16 +40,18 @@
 /* 🖥️🔹 Laptops pequeñas y tablets grandes */
 @media (max-width: 1366px) and (min-width: 1025px) {
     .button-agregar{
-   background-color: #0A7E8C;
-    color:#fff;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
+      position: relative;
+      left: 58px;
+      bottom: 10px;
+    justify-content: left;
+    color:green;
+    border: 2px solid green;
+    padding: 0px 6px;
+    border-radius: 360px;
     text-align: "center";
     text-decoration: none;
-    display: inline-block;
    cursor: pointer;
-    font-size: 15px;
+    font-size: 20px;
   }
 
 }
@@ -54,16 +60,18 @@
 @media (max-width: 1024px) and (min-width: 769px) {
     
    .button-agregar{
-   background-color: #0A7E8C;
-    color:#fff;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
+  position: relative;
+      left: 58px;
+      bottom: 10px;
+    justify-content: left;
+    color:green;
+    border: 2px solid green;
+    padding: 0px 6px;
+    border-radius: 360px;
     text-align: "center";
     text-decoration: none;
-    display: inline-block;
    cursor: pointer;
-    font-size: 17px;
+    font-size: 20px;
   }
 
   
@@ -74,16 +82,18 @@
 @media (max-width: 768px) and (min-width: 601px) {
  
   .button-agregar{
-   background-color: #0A7E8C;
-    color:#fff;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
+  position: relative;
+      left: 58px;
+      bottom: 10px;
+    justify-content: left;
+    color:green;
+    border: 2px solid green;
+    padding: 0px 6px;
+    border-radius: 360px;
     text-align: "center";
     text-decoration: none;
-    display: inline-block;
    cursor: pointer;
-    font-size: 10px;
+    font-size: 20px;
   }
 
 }
@@ -92,16 +102,18 @@
 @media (max-width: 600px) {
    
   .button-agregar{
-   background-color: #0A7E8C;
-    color:#fff;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
+    position: relative;
+      left: 52px;
+      bottom: 6px;
+    justify-content: left;
+    color:green;
+    border: 2px solid green;
+    padding: 0px 6px;
+    border-radius: 360px;
     text-align: "center";
     text-decoration: none;
-    display: inline-block;
-cursor: pointer;
-    font-size: 10px;
+   cursor: pointer;
+    font-size: 20px;
   }
 
 }
@@ -110,16 +122,17 @@ cursor: pointer;
 @media (max-width: 400px) {
  
   .button-agregar{
-   background-color: #0A7E8C;
-    color:#fff;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
+ position: relative;
+      left: 53px;
+      bottom: 6px;
+    justify-content: left;
+    color:green;
+    border: 2px solid green;
+    padding: 0px 6px;
+    border-radius: 360px;
     text-align: "center";
     text-decoration: none;
-    display: inline-block;
-cursor: pointer;
-    font-size: 10px;
-  }
+   cursor: pointer;
+    font-size: 20px;  }
 }
 

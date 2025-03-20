@@ -2,30 +2,75 @@
   .detallesCarro {
     
 width: clamp(180px, 50vw, 240px); /* Ancho flexible */
-height: 200px;
+height: auto;
 padding: clamp(12px, 3vw, 20px); /* Espaciado adaptable */
 border-radius: clamp(8px, 2vw, 16px); /* Bordes redondeados */
 box-shadow: 0 0 10px 5px rgba(0, 255, 0, 0.5); /* Sombra verde difuminada */
 position:  absolute;
-margin-top: 20px;
 right: 20px;
-background-color: rgba(0, 0, 0, 0.6);
-margin: auto;
+background-color: #fff;
+margin: 0 auto;
 backdrop-filter: blur(5px);
 border:  none;
 position: absolute;
-font-size: 12px;
+color: #000;
 overflow-y: auto;
+
+.overlay {
+  display: flex;
+  flex-direction: row;
+}
+.title-carrito{
+  width: 100%;
+  text-align: left;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  color: #000;
+}
+.cerrar-btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  height: 0px;
+  
+ }
+ .cerrar-btn:hover{
+   border: none;
+   
+ }
 
       }
 
+      .props-prod {
+        font-size: 12px;
+        margin :0;
+        padding: 0;
+        width: 100%;
+position: relative;
+overflow-y: auto;
+border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+margin-bottom: 10px;
+padding-bottom: 10px;
+
+      }
+
+
   .lista-productos {
+overflow-y: auto;
+    margin: 0;
     padding: 0;
   }
 
   .propiedades {
 
-    color:  white;
+    color:  #000;
     border:  1px solid rgba(0, 128, 0, 0.2);
     border-radius:  5px;
     list-style-type:  none;
@@ -35,23 +80,56 @@ overflow-y: auto;
     padding:  10px 15px;
   }
 
+  .end-btns{
+    display:  flex;
+    justify-content:  space-between;
+    align-items:  center;
+  }
+  .deteleall{
+    background-color:  #fff;
+    width:  15px;
+    padding:  0;
+    margin:  0;
+    border: 1px solid green;
+    color:  green;
+  
+  }
+  .deleteall-img{
+    width:  15px;
+    padding:  0;
+    margin:  0;
+    background-color:  #fff;
+    border: 1px solid green;
+    color:  green;
+  }
+  .deleteall:hover{
+    background-color:  #fff;
+    border: none;
+  }
   .total {
     color:  white;
     font-weight:  bold;
     border:  1px solid rgba(0, 128, 0, 0.2);
-    font-size:  1.1rem;
+    font-size:  15px;
     margin-top: 10px;
     display:  flex;
     padding:  10px 15px;
     align-items:  center;
-    flex-direction:  column;
+    background-color: green;
+    border-radius:  15px;
+  }
+
+  .total:hover{
+    background-color:  darkgreen;
+    color:  white;
   }
  .borrar {
     width:  15px;
     padding:  0;
     margin:  0;
     background-color:  white;
-    color:  black;
+    border: 1px solid green;
+    color:  green;
     
   }
   .borrar:hover{
@@ -61,9 +139,12 @@ overflow-y: auto;
 
 /* 📱🔹 Móviles grandes */
 @media (max-width: 768px){
+
  .detallesCarro {
-    position:  relative;
-    right: -30px;
+    position:  absolute;
+    width: 320px;
+    right: -100px;
+    height: auto;
     overflow-Y:  auto;
   }
 

@@ -16,6 +16,7 @@ class Productos extends Component {
             producto={producto}
           />
         ))}
+       
       </div>
     );
   }

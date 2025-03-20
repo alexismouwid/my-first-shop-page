@@ -1,6 +1,6 @@
 @keyframes aparecer {
     from {
-        transform: translateX(-50px);
+        transform: translateX(-200px);
         opacity: 0;
     }
     to {
@@ -24,11 +24,12 @@
  .frutas {
 
         
+animation: aparecer 1s ease-in-out;
      right: 180px;
      width: 100%;
      height: 100%;
      display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(6, 1fr);
         margin: 50px auto;
         max-width: 1920px; /* Ajusta para móviles */
         gap: 50px; /* Menos espacio entre frutas */
@@ -43,10 +44,11 @@
 .frutas {
 
         
+animation: aparecer 1s ease-in-out;
      width: 100%;
      height: 100%;
      display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(6, 1fr);
         margin: 50px auto;
         max-width: 1920px; /* Ajusta para móviles */
         gap: 10px; /* Menos espacio entre frutas */
@@ -61,10 +63,11 @@
 .frutas {
 
         
+animation: aparecer 1s ease-in-out;
      position: relative;
      right: 60px;
      display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(6, 1fr);
         margin: 50px auto;
         max-width: 1200px; /* Ajusta para móviles */
         gap: 10px; /* Menos espacio entre frutas */
@@ -77,12 +80,13 @@
 /* 📟🔹 Tablets medianas */
 @media (max-width: 1024px) and (min-width: 769px) {
     .frutas {
-        display: grid;
-       
-        grid-template-columns: repeat(3, 1fr);
+        
+      animation: aparecer 1s ease-in-out;  
+     display: grid;
+        grid-template-columns: repeat(4, 1fr);
  justify-content: center;
         align-items: center;
-        max-width: 850px; /* Reduce el ancho para centrar más */
+        max-width: 700px; /* Reduce el ancho para centrar más */
         gap: 10px; /* Menos espacio entre elementos */
     }
 
@@ -93,7 +97,9 @@
 /* 📱🔹 Móviles grandes */
 @media (max-width: 768px) and (min-width: 601px) {
   .frutas {
-        grid-template-columns: repeat(2, 1fr);
+
+      animation: aparecer 1s ease-in-out;  
+        grid-template-columns: repeat(4, 1fr);
         max-width: 660px;
         gap: 10px;
     }
@@ -102,6 +108,8 @@
 /* 📱🔹 Móviles pequeños */
 @media (max-width: 600px) {
   .frutas {
+
+      animation: aparecer 1s ease-in-out;  
         grid-template-columns: repeat(2, 1fr);
         justify-content: center;
         align-items: center;
@@ -118,6 +126,9 @@ gap: 20px;
 /* 📱🔹 Móviles ultra pequeños (Ej: iPhone SE, 320px) */
 @media (max-width: 400px) {
 .frutas {
+
+
+      animation: aparecer 1s ease-in-out;  
         grid-template-columns: repeat(2, 1fr);
         justify-content: center;
         align-items: center;

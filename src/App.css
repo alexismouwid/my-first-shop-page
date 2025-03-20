@@ -28,7 +28,7 @@ html{
 }
   .content-1{
     
-    background-image: url("/vegetales.png");
+    background-image: url("/imagen3.jpg");
     background-size: cover;
     background-position: center;
     width: 100vw;
@@ -78,6 +78,8 @@ html{
 
 
 .btn-productos{
+
+ 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -93,7 +95,7 @@ html{
 }
 
   .layout-btns{
-  background-image: url("/fv.jpg");
+  background-image: url("/imagen5.jpg");
     background-size: cover;
     background-position: left;
     width: 100%;
@@ -107,6 +109,7 @@ html{
   }
 /*Seccion 2 configs css start*/
   .content-btns{
+ animation: aparecer 1.1s ease-in-out; /* 🔥 Aplica la animación */
      display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -128,6 +131,7 @@ align-items: center;
     
   }
   .btn-frutas, .btn-vegetales, .ir-carro, .btn-productos{
+     
        font-size: clamp(14px, 2vw, 24px); /* Tamaño de fuente adaptable */
   padding: clamp(8px, 1vw, 16px) clamp(12px, 2vw, 24px); /* Espaciado adaptable */
   width: clamp(100px, 20vw, 300px); /* Ancho dinámico */
@@ -138,9 +142,10 @@ box-shadow: 0 0 5px 5px rgba(0, 255, 0, 0.5); /* Sombra verde difuminada */
   color: black;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+animation: aparecer 1.1s ease-in-out forwards; /* 🔥 Aplica la animación */
    }
 
-
+ 
 
    .ir-carro:hover{
     background-color:  green;
