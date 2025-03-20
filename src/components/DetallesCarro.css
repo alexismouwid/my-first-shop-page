@@ -2,7 +2,7 @@
   .detallesCarro {
     
 width: clamp(180px, 50vw, 240px); /* Ancho flexible */
-height: auto;
+height: 200px;
 padding: clamp(12px, 3vw, 20px); /* Espaciado adaptable */
 border-radius: clamp(8px, 2vw, 16px); /* Bordes redondeados */
 box-shadow: 0 0 10px 5px rgba(0, 255, 0, 0.5); /* Sombra verde difuminada */
@@ -141,10 +141,9 @@ overflow-y: auto;
 @media (max-width: 768px){
 
  .detallesCarro {
-    position:  absolute;
     width: 320px;
     right: -100px;
-    height: auto;
+    height: 300px;
     overflow-Y:  auto;
   }
 
