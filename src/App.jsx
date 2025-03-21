@@ -8,6 +8,7 @@ import VerProductos from "./components/VerProductos";
 import Footer from "./components/Footer";
 import "./App.css";
 
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -24,13 +25,32 @@ class App extends Component {
       { name: "Lechuga", price: 1000, img: "/productos/lechuga.jpg" },
       { name: "Zanahoria", price: 1500, img: "/productos/zanahoria.png" },
       { name: "Cebolla", price: 2100, img: "/productos/cebolla.png" },
+      { name: "Cebolla Larga", price: 3300, img: "/productos/cebolla-larga.jpg" },
       { name: "Brócoli", price: 1350, img: "/productos/brocoli.png" },
-      { name: "Espinaca", price: 1700, img: "/productos/espinaca.png" },
+      { name: "Espinaca", price: 1420, img: "/productos/espinaca.png" },
       { name: "Pepino", price: 1900, img: "/productos/pepino.png" },
       { name: "Calabacín", price: 2250, img: "/productos/calabacin.png" },
       { name: "Ajo", price: 2500, img: "/productos/ajo.png" },
+      { name: "Apio", price: 1750, img: "/productos/apio.jpg" },
       { name: "Pimiento", price: 1600, img: "/productos/pimiento.png" },
       { name: "Repollo", price: 1750, img: "/productos/repollo.png" },
+      { name: "Papa", price: 355, img: "/productos/papa.jpg" },
+      { name: "Papa Amarilla", price: 350, img: "/productos/amarilla.jpg" },
+      { name: "Papa Lavada", price: 555, img: "/productos/papa-lavada.png" },
+      { name: "Yuca", price: 945, img: "/productos/yuca.jpg" },
+      { name: "Ñame", price: 2400, img: "/productos/ñame.jpg" },
+      { name: "Platano", price: 1175, img: "/productos/platano.jpg" },
+      { name: "Ulluco", price: 945, img: "/productos/ulluco.jpg" },
+      { name: "Remolacha", price: 920, img: "/productos/remolacha.jpg" },
+      { name: "Arracacha", price: 2100, img: "/productos/arracacha.jpg" },
+      { name: "Repollo Blanco", price: 1050, img: "/productos/repollo-blanco.jpg" },
+      { name: "Espinaca", price: 920, img: "/productos/espinaca.jpg" },
+      { name: "Repollo Morado", price: 3010, img: "/productos/repollo-morado.jpg" },
+      { name: "Mazorca", price: 2400, img: "/productos/mazorca.jpg" },
+      { name: "Calabacin", price: 2400, img: "/productos/calabacin.png" },
+      { name: "Berenjena", price: 900, img: "/productos/berenjena.jpg" },
+      { name: "Jengibre", price: 1960, img: "/productos/jengibre.jpg" },
+
     ],
    
 frutas: [
@@ -46,6 +66,13 @@ frutas: [
       { name: "Guayaba", price: 2500, img: "/frutas/guayaba.jpg" },
       { name: "Maracuya", price: 1600, img: "/frutas/maracuya.jpg" },
       { name: "Sandia", price: 1750, img: "/frutas/sandia.jpg" },
+ { name: "Banano", price: 720, img: "/frutas/banano.jpg" },
+      { name: "Kiwi", price: 1810, img: "/frutas/kiwi.jpg" },
+      { name: "Lulo", price: 740, img: "/frutas/lulo.jpg" },
+      { name: "Mango", price: 3080, img: "/frutas/mango.jpg" },
+      { name: "Tomate de arbol", price: 250, img: "/frutas/tomate-arbol.jpg" },
+      { name: "Curuba", price: 1375, img: "/frutas/curuba.jpg" },
+
     ],
     carro: [],
     esCarroVisible: false,
@@ -97,7 +124,7 @@ vaciarCarro = () => {
           ? {
               ...x,
               cantidad: x.cantidad + 1,
-              price: (x.cantidad + 1) * x.price,
+              price: (x.cantidad + 1) * producto.price,
             }
           : x,
       );
@@ -108,7 +135,20 @@ vaciarCarro = () => {
     });
   };
 
+eliminarDelCarro = (producto) => {
+  const { carro } = this.state;
+
+  // Filtra el carrito para excluir el producto que se desea eliminar
+  const newCarro = carro.filter((x) => x.name !== producto.name);
+
+  // Actualiza el estado con el nuevo carrito
+  this.setState({ carro: newCarro });
+};
+
+
+
   mostrarCarro = () => {
+    console.log("Mostrar carro:", this.state.esCarroVisible);
     this.setState({ esCarroVisible: !this.state.esCarroVisible });
   };
 
@@ -163,6 +203,7 @@ this.verificarSesion();
             cerrarSesion={this.cerrarSesion}
             verificarSesion={this.verificarSesion}
             vaciarCarro={this.vaciarCarro}
+            eliminarDelCarro={this.eliminarDelCarro}
           />
 
           <h1 className="titulo">

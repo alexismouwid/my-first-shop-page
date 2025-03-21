@@ -51,7 +51,7 @@ const Fruta = ({ fruta, agregarAlCarro }) => {
        <Button onClick={() => agregarAlCarro(fruta)}>+</Button>
       <img style={styles.img} src={fruta.img} alt={fruta.name} />
       <h3 style={styles.titulo}>{fruta.name}</h3>
-      <p style={styles.precio}>{fruta.price}</p>
+      <p style={styles.precio}>${fruta.price}/u</p>
      
     </div>
   );

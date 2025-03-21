@@ -23,7 +23,7 @@ const styles = {
 };
 class Carro extends Component {
   render() {
-    const { carro, esCarroVisible, mostrarCarro , vaciarCarro} = this.props;
+    const { carro, esCarroVisible, mostrarCarro , vaciarCarro, eliminarDelCarro} = this.props;
     // Reduce() suma todas las cantidades de los productos en el carrito y devuelve el total
     const cantidad = carro.reduce((acc, el) => acc + el.cantidad, 0);
     return (
@@ -39,6 +39,7 @@ class Carro extends Component {
         esCarroVisible={esCarroVisible}
         mostrarCarro={mostrarCarro}
           vaciarCarro={vaciarCarro}
+          eliminarDelCarro={eliminarDelCarro}
         /> : null}
         
 

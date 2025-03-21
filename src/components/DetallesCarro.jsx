@@ -7,7 +7,7 @@ class DetallesCarro extends Component {
 
   
   render() {
-    const { carro, esCarroVisible, mostrarCarro, vaciarCarro} = this.props;
+    const { carro, esCarroVisible, mostrarCarro, vaciarCarro, eliminarDelCarro} = this.props;
     console.log(carro);
     return (
       <div className='detallesCarro'>
@@ -37,9 +37,9 @@ class DetallesCarro extends Component {
                 height="40px"
               />
               {producto.name}
-              <span >{'\n'}{producto.cantidad}</span>
+              <span >{producto.cantidad}</span>
               <span>${producto.price}</span>
-              <button className='borrar'> x </button>
+              <button onClick={() => eliminarDelCarro(producto)} className='borrar'> x </button>
             </li>
           ))}
         </ul>
@@ -48,8 +48,8 @@ class DetallesCarro extends Component {
 
 
         <div className='end-btns'>
-          <button onClick={vaciarCarro} className='deleteall'>
-<img className='deteleall-img' src="/borrar.png" alt="borrar" width="15px" />
+          <button  title="Eliminar todo" onClick={vaciarCarro} className='deleteall'>
+<img className='deteleall-img' src="/borrar.png" alt="borrar" />
           </button>
  <button ref={this.refTotal} className='total'> Ir a pagar                
           Subtotal: {carro.reduce((acc, el) => acc + el.price, 0)}
