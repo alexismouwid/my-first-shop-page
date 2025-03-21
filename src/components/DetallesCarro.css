@@ -88,16 +88,14 @@ overflow-y: auto;
   .deteleall{
     background-color:  #fff;
     width:  15px;
-    padding:  10px 15px;
+    padding:  0;
     margin:  0;
     border: 1px solid green;
     color:  green;
-    position:relative;
-
   
   }
   .deleteall-img{
-    width:  20px;
+    width:  15px;
     padding:  0;
     margin:  0;
     background-color:  #fff;
@@ -119,9 +117,6 @@ overflow-y: auto;
     align-items:  center;
     background-color: green;
     border-radius:  15px;
-    position: relative;
-    right: -10px;
-    font-size: 14px;
   }
 
   .total:hover{
@@ -146,8 +141,8 @@ overflow-y: auto;
 @media (max-width: 768px){
 
  .detallesCarro {
-    width: 320px;
-    right: -110px;
+    width: 330px;
+    right: 10px;
     height: 300px;
     overflow-Y:  auto;
   }

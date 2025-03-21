@@ -44,7 +44,6 @@ class App extends Component {
       { name: "Remolacha", price: 920, img: "/productos/remolacha.jpg" },
       { name: "Arracacha", price: 2100, img: "/productos/arracacha.jpg" },
       { name: "Repollo Blanco", price: 1050, img: "/productos/repollo-blanco.jpg" },
-      { name: "Espinaca", price: 920, img: "/productos/espinaca.jpg" },
       { name: "Repollo Morado", price: 3010, img: "/productos/repollo-morado.jpg" },
       { name: "Mazorca", price: 2400, img: "/productos/mazorca.jpg" },
       { name: "Calabacin", price: 2400, img: "/productos/calabacin.png" },

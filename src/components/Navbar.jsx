@@ -69,12 +69,21 @@ verificarSesion,
           <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
             {usuarioAutenticado ? ( 
  <>           
-              <li><h1> Inicio</h1> </li>
+   <li> <button className='mis-pedidos'>Mis pedidos</button> </li>
                 <li>
                   <button className="cerrar-sesion" onClick={cerrarSesion}>
                     Cerrar Sesión
                   </button>
                 </li>
+ <li className='carro'>
+                  <Carro 
+                  carro={carro} 
+                  esCarroVisible={esCarroVisible}
+                  mostrarCarro={mostrarCarro}
+                  vaciarCarro={vaciarCarro} 
+                  eliminarDelCarro={eliminarDelCarro}/>
+                </li>
+
                              </>
             ): (  
               <>

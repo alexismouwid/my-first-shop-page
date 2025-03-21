@@ -1,5 +1,4 @@
 .formulario-container {
-  color: white;
   border-radius: 5px;
   position: relative;
   padding: 10px;
@@ -34,6 +33,7 @@ border-radius: clamp(5px, 1vw, 10px);
   border: 2px solid #ccc;
     margin-bottom: 10px;
    background-color: #f8f8f8;
+   color: black;
 }
 
 

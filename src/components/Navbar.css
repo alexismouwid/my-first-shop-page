@@ -75,6 +75,34 @@
   cursor: pointer;
   color: white;
 }
+.cerrar-sesion {
+background-color: white;
+color: black;
+border: 1px solid green;
+border-radius: 15px;
+padding: 10px 15px;
+margin: 10px 15px;
+font-size: 14px;
+
+}
+.cerrar-sesion:hover {
+  color: white;
+  background-color: darkgreen;
+}
+.mis-pedidos {
+
+background-color: white;
+color: black;
+border: 1px solid green;
+border-radius: 15px;
+padding: 10px 15px;
+margin: 10px 15px;
+font-size: 14px;
+}
+.mis-pedidos:hover {
+  color: white;
+  background-color: darkgreen;
+}
 
 
 /* 📱🔹 Responsive */
