@@ -3,34 +3,46 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const { expressjwt: expressJwt } = require("express-jwt");
 const User = require("../models/user.model.js");
+const Order = require("../models/order.model.js");
 
+
+
+// ✅ Middleware para validar el token JWT
 const validateJwt = expressJwt({
-  secret: process.env.SECRET,
-  algorithms: ["HS256"],
+  secret: process.env.SECRET, // Secreto para validar el token
+  algorithms: ["HS256"], // Algoritmo de firma del token
 });
 
+// ✅ Función para generar un token JWT
 const signToken = (_id) => jwt.sign({ _id }, process.env.SECRET);
 
+// ✅ Middleware para buscar y asignar el usuario autenticado
 const findAndAssignUser = async (req, res, next) => {
   try {
-    const user = await user.findbById(req.auth._id);
+    const user = await User.findById(req.auth._id); // Buscar usuario por ID del token
     if (!user) {
       return res.status(401).end();
     }
-    req.auth = user;
+    req.auth = user; // Asignar usuario autenticado a la petición
     next();
   } catch (e) {
     next(e);
   }
 };
+
+// ✅ Middleware de autenticación
 const isAuthenticated = express.Router().use(validateJwt, findAndAssignUser);
+
+
+// ✅ Controlador de autenticación
 const Auth = {
+  // 🔹 Endpoint para iniciar sesión
   login: async (req, res) => {
     const { body } = req;
     try {
       const user = await User.findOne({ email: body.email });
       if (!user) {
-        res.status(401).send("Usuario y/o contraseña inválida");
+        return res.status(401).send("Usuario y/o contraseña inválida");
       } else {
         const isMatch = await bcrypt.compare(body.password, user.password);
         if (isMatch) {
@@ -45,6 +57,8 @@ const Auth = {
       return res.status(500).send("Error en el servidor");
     }
   },
+
+  // 🔹 Endpoint para registrar un usuario nuevo
   register: async (req, res) => {
     const { body } = req;
     try {
@@ -67,21 +81,36 @@ const Auth = {
       res.status(500).send(err.message);
     }
   },
-  deleteUser: async (req, res) => {
+
+createOrder: async (req, res) => {
+    const { products, address, phone } = req.body;
+
+    // Obtener información del usuario autenticado
+    const user = req.auth;
+
+    // Calcular el total del pedido
+    const total = products.reduce((sum, product) => sum + product.subtotal, 0);
+
     try {
-      const userId = req.auth._id;
-      const deletedUser = await User.findByIdAndDelete(userId);
-      
-      if (!deletedUser) {
-        return res.status(404).json({ message: "Usuario no encontrado" });
-      }
-      
-      res.status(200).json({ message: "Usuario eliminado exitosamente" });
+      const newOrder = new Order({
+        user: user._id, // Usar el ID del usuario autenticado
+        products,
+        total,
+        buyerName: user.nombre, // Usar el nombre del usuario autenticado
+        address,
+        email: user.email, // Usar el email del usuario autenticado
+        phone,
+      });
+
+      await newOrder.save();
+      res.status(201).send(newOrder);
     } catch (error) {
-      console.error(error.message);
-      res.status(500).send("Error en el servidor");
+      res.status(500).send(error.message);
     }
   },
 };
 
-module.exports = { Auth, isAuthenticated };
+
+// ✅ Exportar módulos
+module.exports = { Auth, isAuthenticated};
+

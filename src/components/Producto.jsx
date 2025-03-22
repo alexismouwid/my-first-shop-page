@@ -3,7 +3,7 @@ import Button from "./Button";
 
 const Producto = ({ producto, agregarAlCarro }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 600);
-
+const [contador, setContador] = useState('+');
   useEffect(() => {
     const handleResize = () => {
       const newIsMobile = window.innerWidth <= 600;
@@ -19,6 +19,11 @@ const Producto = ({ producto, agregarAlCarro }) => {
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  const handleClick = () => {
+    agregarAlCarro(producto);
+    setContador((prev) => (prev === "+" ? 1 : prev + 1));
+  };
 
   const styles = {
     producto: {
@@ -55,7 +60,7 @@ const Producto = ({ producto, agregarAlCarro }) => {
   return (
     <div style={styles.producto}>
 
-      <Button onClick={() => agregarAlCarro(producto)}>+</Button>
+      <Button onClick={handleClick}>+</Button>
       <img style={styles.img} src={producto.img} alt={producto.name} />
       <h3 style={styles.titulo}>{producto.name}</h3>
       <p style={styles.precio}>${producto.price}/u</p>
